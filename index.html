@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <meta charset="utf-8" />
         <title>My test page</title>
         <meta name="author" content="Chris Mills" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta
          name="description"
          content="Website für Seminarfacharbeit" />
          <link rel="icon" type="image/x-icon" href="icon.ico">
-      </head>
+         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+         <link rel="stylesheet" href="icomoon/style.css">
+         <link rel="stylesheet" href="style.css">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+        </head>
     <body>
-        <h1>Hello World</h1>
-        <p>I'm hosted with GitHub Pages by Kaja.</p>
+        <div class="container-fluid">
+            <h1>Hello World</h1>
+            <p>I'm hosted with GitHub Pages by Kaja.</p>
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <button type="button" class="btn btn-default" aria-label="Left Align">
+                <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+              </button>
+              
+              <button type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+              </button>
+        </div>
+       
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="bootstrap/js/jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>
