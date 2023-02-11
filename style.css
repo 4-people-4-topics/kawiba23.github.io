@@ -1,0 +1,16 @@
+body > .container {
+    min-height: 101vh;
+}
+
+.pseudoEl::before {
+    font-family: "icomoon";
+    content: '\&#xe98c;';
+}
+#infos article {
+    display: none;
+    visibility: hidden;
+}
+#infos article.active{
+    display: block;
+    visibility: visible;
+}
