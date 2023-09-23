@@ -1,0 +1,179 @@
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+
+
+  
+
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;} 
+
+
+
+
+
+
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+
+
+
+
+
+
+Altes JS 
+
+
+var app = angular.module('myApp', []);
+  app.controller('MyCtrl', function($scope) {
+    
+});
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
+
+
+
+
+
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  $( document ).ready(function() {
+    
+    // Handler for .ready() called.
+    $.get("data.json", function( data ){
+      let wb = data;
+      let krzl, desc, leText;
+      $.each(wb.dict, function(item, hr){
+        krzl = item;
+        desc = hr;
+        var descr = wb.data[item]
+        var tplLink = '<li><a class="dropdown-item" href="#'+krzl+'">'+desc+'</a></li>'
+        $('#dropSelect  .dropdown-menu').prepend(tplLink)
+        var content = '<article id="'+krzl+'">'+ descr + '</article>'
+        $('#infos').append(content)
+      }); 
+      
+
+    })
+    $("#dropSelect .dropdown-menu").on("click", "a", function(el){
+      console.log(el)
+      var clickedItem = $(el.target)
+      var showNext = clickedItem.attr('href')
+      console.log(showNext)
+      $('#infos article.active').removeClass('active')
+      $(showNext).addClass("active")
+    })
+    
+  }); 
+; 
+
+
+$( document ).ready(function() {
+    // Handler for .ready() called.
+    $("#navbarNavDropdown .dropdown-menu").on("click", function(ev) {
+        console.log("clickery")
+        $.get("demo_test.asp", function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+        })
+    });
+    
+  });

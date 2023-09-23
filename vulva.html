@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <script src="angular/angular.min.js"></script>
+    <!--<script src="angular/angular.js"></script> -->
+    <script src="angular/angular-route.js"></script>
+    <script src="angular/angular-resource.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./jquery.js" ></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js.js" ></script>
+    <meta charset="utf-8" />
+    <title>My test page</title>
+    <meta name="author" content="Chris Mills" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta
+     name="description"
+     content="Website für Seminarfacharbeit" />
+     <link rel="icon" type="image/x-icon" href="icon.ico">
+     <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+     <link rel="stylesheet" href="icomoon/style.css">
+     <link rel="stylesheet" href="style.css" type="text/css">
+     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body ng-app="myApp">
+    <div class="container" ng-controller="MyCtrl">
+      <script src="data.json" ng-load >
+
+      </script>
+
+      <div ng-include="'header.html'"></div>
+      <script>
+        var app = angular.module('myApp', []);
+        app.controller('MyCtrl', function($scope, $http) 
+        {
+          $http.get("header.html").then(function (response) {
+           $scope.names = response.data.records;
+          });
+        });
+        </script>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer">
+        <link rel="stylesheet" href="style.css">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="./index.html">Home</a></li>
+           <li><a href="./impressium.json">Impressium</a></li>
+           <li><a href="./datenschutz.json">Datenschutz</a></li>
+           <li><a href="./barrierefreiheit.json">Barrierefreiheit</a></li>
+          </ul>
+        </div>
+      </footer>
+    </body>
+  

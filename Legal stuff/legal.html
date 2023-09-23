@@ -1,0 +1,97 @@
+<!DOCTYPE html >
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+      name="description"
+      content="Website für Seminarfacharbeit" />
+      <link rel="icon" type="image/x-icon" href="icon.ico">
+      <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+      <link rel="stylesheet" href="icomoon/style.css">
+      <link rel="stylesheet" href="style.css">
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <ng-include src="'header.html'" ></ng-include>
+      <div class="container" ng-controller="MyCtrl">
+        <h1>Hello World</h1>
+        <p>I'm hosted with GitHub Pages by Kaja.</p>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Impressum
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <article>
+                    <p class="lead">
+                        Diese Website wird von uns, [K.Willmann, etc.], als Privatpersonen betrieben und ist nicht Teil einer gewerblichen oder kommerziellen Tätigkeit.
+                    </p> 
+                    <br>
+                    <h3 class="h2">Haftungshinweis:</h3>
+                    <p  class="lead">
+                        Der Haftungshinweis wird der Website noch hinzugefügt. 
+                    </p>
+                </article> 
+                <button type="button" class="btn btn-primary">Primary</button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Barrierefreiheit
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <article>
+                    <p class="lead">
+                        Informationen zur Barrierfreiheit werden noch hinzugefügt.
+                        <h3 class="h2">Maßnahmen:</h3> 
+                        <p class="lead">
+                        ...
+                        <br>
+                        Notiz
+                    </p>
+                    
+
+
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Datenschutz
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <article>
+                    <h2> Datenschutz wird noch hinzugefügt </h2>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
