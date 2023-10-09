@@ -1,38 +1,35 @@
-/*.body {
-  margin: 0;
-  width: 100%;
-  max-width: 1500px;
-  color:rgb(164, 53, 53)
-}
-
-
-
-.header {
-    overflow: hidden;
-    background-color: rgb(253, 249, 249);
+.menu {
+    background-color: white !important;
     position: fixed;
     top: 0;
     width: 100%;
     padding: 50px; 
     margin-bottom: 25px;
-    padding-bottom: 30px;
-    text-align: right; 
+    padding-bottom: 30px; 
     margin-left: 0%;
     display: flex;
     z-index: 2;
-    border: rgb(204, 204, 204) 3px groove; 
-  }
-
+    border-bottom: rgb(247, 247, 247) 3px groove; 
+    height: 100px;
+}
 
 .menu-text {
   display: inline-block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-} */
+} 
 
 .container {
-  max-width: 1500px;
+  max-width: 1519px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
+
+.container.ng-scope {
+  overflow-x: hidden;
+} 
 
 .navbarwidth {
   position: absolute;
@@ -40,75 +37,141 @@
 }
 
 .navbar {
-  position: relative;
-  text-align: center;
-  overflow: hidden; 
+  position: absolute;
+  text-align: center; 
   margin-top: 100px;
-  top: 0;
+  margin-bottom: 100px;
   width: 100%;
-  background-color: rosybrown;
   margin-left: 0;
   margin-right: 0;
+  padding: 0;
   border: 1px black; 
   display: inline-block;
+  margin-bottom: 50px;
+  height: 70px;
+  z-index: 1;
+  vertical-align: middle;
  }
 
- .navbar a:hover {
-  background-color: aqua;
-  color:#323f45;
+ .navbar a {
+  position: relative;
+  z-index: 1; 
  }
 
- #nav li a, #nav li {
+.navbarNavDropdown {
+  padding-bottom: 100px;
+  overflow-x: hidden;
+}
+
+
+.btn {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 23px;
+  text-align: justify;
+}
+.btn1 {
+  text-decoration: underline #F25C05;
+}
+.btn2 {
+  text-decoration: underline #F25252;
+}
+.btn3 {
+  text-decoration: underline #F2C1BD;
+}
+.btn4 {
+  text-decoration: underline #F35E8C;
+}
+.btn5 {
+  text-decoration: underline #F25C05;
+}
+
+
+.content-box .title {
+  padding: 50px;
+  margin-top: 200px;
+  margin-bottom: 30px;
+  height: 60;
+  line-height: 30px;
+  width: auto; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
-  display: inline-block;
-  min-width: 70px;
+  font-size: 40px;
+  display: block; 
+  align-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-.nav li {
-  list-style: none;
+.content-box .content {
+  overflow: hidden;
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 70px;
+  margin-right: 70px;
+  height: auto; 
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 50px;
+  margin-bottom: 50px;
 }
-.nav li a {
-  padding: 1em 2em;
-  text-decoration: none;
-  color: #5FFB17;
-  border-right: 1px solid #3c3c3c;
-  border-left: 1px solid #292929;
-  border-bottom: 1px solid #232323;
-  border-top: 1px solid #545454;
+
+.content-a {
+  background-color: #F25C05;
+  margin-left: 70px;
+  margin-right: 70px;
+} 
+.content-m {
+  background-color: #F25252;
+  margin-left: 70px;
+  margin-right: 70px;
 }
-.nav li a:hover {
-  background: #2a0d65;
-  background: -moz-linear-gradient(top, #11032e, #2a0d65);
-  background: -webkit-gradient(linear, left top, left bottom, from(#11032e), to(#2a0d65));
+.content-e {
+  background-color: #F2C1BD;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.content-o {
+  background-color: #F35E8C;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.content-p {
+  background-color: #F25C05;
+  margin-left: 70px;
+  margin-right: 70px;
+}
   
-}
-  /* Page content */
-  .content {
-    width: 70%;
-    padding: 16px;
-  }
-  
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) 
   .sticky + .content {
     padding-top: 60px;
-  }
+  } */
 
   
 
 .image-container {
-  width: 100%;
+  width: 70%;
+  margin-top: 100px;
   height: 500px;
   object-fit: cover;
   object-position: 50% 45%;
   display: block;
-}
+  overflow-x: hidden;
+} 
+
+
 
 
 
 
 .col_white_amrc { color:rgb(0, 0, 0);} 
-footer { width:100%; background-color:#fae2ed; min-height:250px; padding:10px 0px 25px 0px ;}
-.pt2 { padding-top:40px ; margin-bottom:20px ;}
+/*.footer-a {background-color: #F25C05;}
+.footer-m {background-color: #F25252;}
+.footer-e {background-color: #F2C1BD;}
+.footer-o {background-color: #F35E8C;}
+.footer-p {background-color: #F25C05;}
+.footer-main {background-color: rgb(243, 197, 105);} */
+
+footer { width:100%; min-height:250px; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px; margin-bottom:20px ;}
 footer p { font-size:13px; color:rgb(0, 0, 0); padding-bottom:0px; margin-bottom:8px;}
 .mb10 { padding-bottom:15px ;}
 .footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }

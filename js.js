@@ -1,7 +1,10 @@
-var app = angular.module('myApp', []);
-app.controller('MyCtrl', function($scope, $http) 
-{
-  $http.get("header.html").then(function (response) {
-    $scope.names = response.data.records;
+$( document ).ready(function() {
+  // Handler for .ready() called.
+  $("navbar").on("click", function(ev) {
+      console.log("clickery")
+      $.get("demo_test.asp", function(data, status){
+          alert("Data: " + data + "\nStatus: " + status);
+      })
   });
+  
 }); 
