@@ -81,9 +81,8 @@
 .btn4 {
   text-decoration: underline #F35E8C;
 }
-.btn5 {
-  text-decoration: underline #F25C05;
-}
+
+
 
 
 .content-box .title {
@@ -115,7 +114,7 @@
 }
 
 .content-a {
-  background-color: #F25C05;
+  background-color: #f25c05;
   margin-left: 70px;
   margin-right: 70px;
 } 
@@ -129,13 +128,8 @@
   margin-left: 70px;
   margin-right: 70px;
 }
-.content-o {
-  background-color: #F35E8C;
-  margin-left: 70px;
-  margin-right: 70px;
-}
 .content-p {
-  background-color: #F25C05;
+  background-color: #F35E8C;
   margin-left: 70px;
   margin-right: 70px;
 }
@@ -163,12 +157,11 @@
 
 
 .col_white_amrc { color:rgb(0, 0, 0);} 
-/*.footer-a {background-color: #F25C05;}
-.footer-m {background-color: #F25252;}
-.footer-e {background-color: #F2C1BD;}
-.footer-o {background-color: #F35E8C;}
-.footer-p {background-color: #F25C05;}
-.footer-main {background-color: rgb(243, 197, 105);} */
+.footer-a {background: #f25c05;}
+.footer-m {background: #F25252;}
+.footer-e {background: #F2C1BD;}
+.footer-p {background: #F35E8C;}
+.footer-main {background: rgb(243, 197, 105);} 
 
 footer { width:100%; min-height:250px; padding:10px 0px 25px 0px ;}
 .pt2 { padding-top:40px; margin-bottom:20px ;}
@@ -176,8 +169,8 @@ footer p { font-size:13px; color:rgb(0, 0, 0); padding-bottom:0px; margin-bottom
 .mb10 { padding-bottom:15px ;}
 .footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
 .footer_ul_amrc li {padding:0px 0px 5px 0px;}
-.footer_ul_amrc li a{ color:#CCC;}
-.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+.footer_ul_amrc li a{ color:rgb(0, 0, 0);}
+.footer_ul_amrc li a:hover{ color:rgb(0, 0, 0); text-decoration:none;}
 .fleft { float:left;}
 .padding-right { padding-right:10px; }
 .position { bottom: 1px;}
@@ -187,7 +180,7 @@ footer p { font-size:13px; color:rgb(0, 0, 0); padding-bottom:0px; margin-bottom
 .footer_ul2_amrc li a:hover { text-decoration:none;}
 .footer_ul2_amrc li i { margin-top:5px;}
 
-.bottom_border { border-bottom:1px solid #323f45; padding-bottom:0px;}
+.bottom_border { border-bottom:1px solid #000000; padding-bottom:0px;}
 .foote_bottom_ul_amrc {
 	list-style-type:none;
 	padding:0px;
@@ -198,11 +191,11 @@ footer p { font-size:13px; color:rgb(0, 0, 0); padding-bottom:0px; margin-bottom
 	margin-left: auto;
 }
 .foote_bottom_ul_amrc li { display:inline;}
-.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+.foote_bottom_ul_amrc li a { color:rgb(0, 0, 0); margin:0 12px;}
 
 .social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
 .social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
-.social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+.social_footer_ul li a { color:rgb(0, 0, 0); border:1px solid rgb(0, 0, 0); padding:8px;border-radius:50%;}
 .social_footer_ul li i {  width:20px; height:20px; text-align:center;}
 
 
@@ -226,3 +219,25 @@ footer {
     bottom: 10%;
     text-align: center;
 }
+
+
+
+
+.parent { height: 300px; width: 600px; overflow: hidden;}
+      /* set height and width for slide elements */
+      .element {float: left; height: 500px; width: 716px; background-color: grey;}
+      /* set the width of the slides div and animation. */
+      .slides { width: calc(716px * 4); animation: slideShow 10s ease infinite;}
+      /* changing the font size and text color for every slide */
+      .element:nth-child(1) {font-size: 2rem; color: blue;}
+      .element:nth-child(2) {font-size: 3rem; color: black;}
+      .element:nth-child(3) {font-size: 4rem; color: green;}
+      .element:nth-child(4) {font-size: 5rem; color: pink;}
+      /* creating the animation for the slideShow */
+      /* for more slides, users can take percentages accordingly. */
+      @keyframes slideShow {
+         20% {margin-left: 0px;}
+         40% {margin-left: calc(-716px * 1);}
+         60% {margin-left: calc(-716px * 2);}
+         80% {margin-left: calc(-716px * 3);}
+      }
