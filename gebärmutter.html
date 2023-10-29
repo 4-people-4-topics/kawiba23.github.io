@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+
+          
+    
+        </script>
+        
+        <div class="content-box">
+        <div class="content-a">
+          <div class="title"> Die Gebärmutter und der Gebärmutterhals </div>
+        </div> 
+
+        <div class="leText">
+            Die Gebärmutter ist ein zentrales Organ im weiblichen Fortpflanzungssystem. Ohne die Gebärmutter ist die Entstehung des menschlichen Lebens nicht möglich. Das Grundverständnis über die Anatomie und die Funktionen der Gebärmutter und ihrer Nachbarorgane ist laut Prof. Dr. Med. Eva-Marie Grischke wichtig, um ein Verständnis für den weiblichen Körper zu bekommen.(1)
+<br>
+            Die Gebärmutter (Uterus) ist ein birnenförmiges Hohlorgan, welches aus glatter Muskulatur besteht. Zu der Anatomie der Gebärmutter gehören der Gebärmutterkörper und der Gebärmutterhals (Zervix) mit dem Muttermund. Der Gebärmutterkörper ist mit etwa zwei Dritteln des Gesamtvolumens der bei weitem größte Teil der Gebärmutter. An den oberen Enden der Gebärmutter gehen an beiden Seiten die Eileiter ab. Der Gebärmutterhals ist Teil der Gebärmutter, der das untere Ende bildet und in die Vagina hineinragt.(2,3) Dort wird sichtbar, dass der Gebärmutterhals im Gebärmuttermund endet, welcher eine offene Verbindung von der Vagina in den Gebärmutterhalskanal ist. Bei geschlossenem Gebärmutterhalskanal stellt der Gebärmutterhals einen Verschluss der Gebärmutter da. Eine Halteschwäche des Gebärmutterhalses kann zu einer Frühgeburt des Fetus führen. Gewöhnlich ist ein Embryo jedoch so leicht, dass er nicht hinausgleitet, sondern an der Schleimhaut der Gebärmutter haftet.  Auch der Gebärmutterhals ist innen mit einer Schleimhaut ausgekleidet, in welcher sich zahlreiche Drüsen befinden. Sie produzieren einen zähflüssigen Schleim, der wie ein Pfropf den Zugang zur Gebärmutter verschließt. Der Pfropf bietet Schutz gegen das Eindringen von Krankheitserregern.(2,3,4)
+            Mit der Geschlechtsreife verändert sich der Pfropf. Er wird manchmal durchlässig, sodass der Schleim aus der Vagina fließen kann. Die Zusammensetzung des Schleimes ändert sich im Laufe eines Monats.(3,4)  Wie die Vagina und die Klitoris hat die Zervix auch Nervenbahnen, die eine Rolle in der sexuellen Reaktion spielen. 
+            Laut Dr. med. Sheila de Liz kann der Gebärmutterhals gerade in der Vagina liegen oder in eine andere Richtung verzogen sein. Die Lage hänge von verschieden Faktoren wie beispielsweise der Position der Gebärmutter ab. Es ist möglich, selbstständig den Gebärmutterhals zu ertasten. Man kann den Mittelfinger langsam in die Vagina einführen. In der Regel liegt der Gebärmutterhals ganz oben an der vorderen Scheidenwand und ist wie ein runder, erhobener Kreis mit einem Grübchen in der Mitte. Zu Beginn sollte man die Zervix vor oder nach der Menstruation ertasten, da sie zu diesen Zeitpunkten tiefer steht und dementsprechend leichter zu erreichen ist. Im Laufe des Menstruationszyklus verändert sich das Gefühl der Zervix, wenn man sie abtastet. Zudem kann sich ihre Position innerhalb der Vagina ändern. Diese Änderungen erfolgen durch die Hormonschwankungen, die den Eisprungprozess begünstigen. Das Abtasten an verschiedenen Zeitpunkten des Zyklus hilft dabei zu verstehen, wie sich die Zervix verändert. Die Gebärmutter ist ein bedeutender Bestandteil der Fortpflanzungsorgane, da sie die Entwicklung befruchteter Eizellen, die Versorgung des Embryos und schließlich die Geburtsaustreibung des Kindes ermöglicht. Der Uterus ist durchschnittlich 7 bis 9 Zentimeter lang und 3 bis 4 Zentimeter breit. Die Größe ist jedoch individuell und kann sich im Laufe des Lebens verändern, unter anderem durch eine Schwangerschaft oder hormonelle Einflüsse. Nach der Geburt eines oder mehrerer Babys könne die Größe der Gebärmutter einer Frauenfaust, teilweise auch einer Männerfaust, ähneln, so Dr. med. Sheila de Liz.(3) Während der Wehen zieht die Gebärmutter sich stark zusammen, um das den Fötus zu gebären.(4)
+            Für die Menstruationsblutung bei ausbleibender Schwangerschaft ist die Gebärmutter ebenfalls zuständig. Wird ein Mädchen oder eine Frau geschlechtsreif, baut die Gebärmutter jeden Monat eine neue Schleimhaut (Endometrium) auf. Zu Beginn des Zyklus ist die Schleimhaut flach und wird unter Einfluss von Östrogen verstärkt aufgebaut, sodass eine Morula, die Vorstufe des Embryos, eingenistet werden kann. Bei ausbleibender Einnistung einer befruchteten Eizelle, werden dessen obere Schichten während der Menstruation wieder abgestoßen. Das Ausscheiden der Schleimhaut geschieht durch das Kontrahieren der Gebärmuttermuskulatur. Hat sich jedoch eine befruchtete Eizelle eingenistet, trägt die Gebärmutterschleimhaut zur Bildung der Plazenta bei. In diesem Fall werden Teile des Endometriums nach der Geburt zusammen mit der Plazenta als Nachgeburt ausgestoßen.(3,4,5)
+            Da die Gebärmutter essentiell für die Ermöglichung einer Schwangerschaft ist, sollte ein allgemeines Verständnis über das Geschlechtsorgan, besonders bei Frauen, vorhanden sein. Aus der Unwissenheit über die Gebärmutter können sich Irrtümer und Fehlinformationen entwickeln. Wie der Gebärmutterhals kann sich auch die Gebärmutter in verschiedene Richtungen neigen. Über den Irrtum, dass eine nach hinten gekippte Gebärmutter Auswirkungen auf die Fertilität der Frau hat, klärt Dr. med. Sheila de Liz auf. Sie erklärt, dass die Fehlinformation daher kommt, dass bei vielen Frauen mit ausgeprägter Endometriose die Gebärmutter nach hinten oder nach vorne mit anderen Bauchorganen verklebt sein kann, beispielsweise mit dem Enddarm oder der Bauchdecke. Die Verminderte Fruchtbarkeit basiert laut De Liz dementsprechend nicht auf der Position der Gebärmutter, sondern auf der Endometriose. Die sogenannte Retroversion der Gebärmutter ist eine Normvariante. (3,6)
+            <br>
+            Um Falschinformationen und Irrtümern entgegenzuwirken, ist ein aufgeklärtes Verständnis über das weibliche Fortpflanzungssystem essentielle. Das Wissen über den Gebärmutterhals kann als Prävention gegen Gebärmutterhalskrebs dienen und Auffälligkeiten schneller erkennen. Hierbei ist das Wissen über zyklusabhängige Veränderungen des Gebärmutterhalses ebenfalls wichtig. Des Weiteren sollten Frauen über die Individualität von Gebärmutterhals und Gebärmutter informiert sein, damit sie sich ein vollständiges Verständnis über ihren Körper und dessen Gesundheit aneignen können. 
+            <br>
+            <br>
+            Quellen: 
+            (1) https://www.leading-medicine-guide.com/de/anatomie/gebaermutter 
+            (2) Corton MM, Leveno K, Bloom S, Hoffman B.: Williams Obstetrics. 24 Edition, McGraw Hill Professional, 2014
+            (3) Dr. med. Sheila de Liz: Unverschämt. Alles über den fabelhaften weiblichen Körper, Hamburg bei Reinbek, 2019
+            (4) Schütz, Esther Elisabeth und Kimmich, Theo: Körper und Sexualität, Freiburg in Breisgau, Verlag Herder, 2001
+            (5) https://www.leading-medicine-guide.com/de/anatomie/gebaermutter
+            (6) https://www.kenhub.com/de/library/anatomie/weibliche-geschlechtsorgane
+            
+          
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-a">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/index.html">Home</a></li>
+           <li><a href="/impressum.html">Impressum</a></li>
+           <li><a href="/datenschutz.html">Datenschutz</a></li>
+           <li><a href="/barrierefreiheit.html">Barrierefreiheit</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>

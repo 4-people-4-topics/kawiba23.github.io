@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+
+          
+    
+        </script>
+        
+        <div class="content-box">
+        <div class="content-a">
+          <div class="title"> Grundwissen weiblicher Anatomie </div>
+        </div> 
+
+        <div class="leText">
+          Die Anatomie der biologischen Frau unterscheidet sich in Form von unterschiedlichen Geschlechtsmerkmalen von der eines Mannes. Hierbei werden in primäre und sekundäre Geschlechtsmerkmale unterschieden. Ihre Struktur ist bereits in den befruchteten Eizellen festgelegt, da die Geschlechtsmerkmale genetisch - biologisch veranlagt sind. Die spätere Ausprägung wird hormonell unterstützt. Die primären Geschlechtsmerkmale sind bereits bei der Geburt eines Kindes sichtbar und sie ermöglichen die Fortpflanzung, sowie die sexuelle Aktivität. Die primären Geschlechtsorgane werden je nach Lage in innere und äußere Geschlechtsorgane eingeteilt. 
+Die sekundären Geschlechtsmerkmale entwickeln sich mit der Pubertät und verändern das Erscheinungsbild, da sie ein äußerliches Signal dafür sind, dass die Geschlechtsreife eingetreten ist. Zu den sekundären Geschlechtsmerkmalen gehören die Brüste, sowie die Körperbehaarung, oftmals eine höhere Stimmlage und den für die Frau typischen Körperbau mit einer anderen Körperfettverteilung als bei Männern. Sie heben die körperlichen Unterschiede zwischen Frauen und Männern deutlicher hervor.(1,2)
+Innerhalb der Gesellschaft bestehen jedoch immense Wissenslücken bezüglich der weiblichen Anatomie. Diese Unwissenheit innerhalb der Gesellschaft, sowie der Schuler resultiert aus fehlender Aufklärung, aber auch aus falschen oder unvollständigen Informationen, welche entscheidende Auswirkungen auf das Verständnis der weiblichen Anatomie haben. So berichtet zum Beispiel die Gynäkologin Dr. med. Sheila de Liz, dass Mädchen und Frauen aufgrund fehlender Aufklärung eine unsichere, zwiespältige oder sogar ablehnende Haltung gegenüber ihrem Körper im Allgemeinen und ihrem Genital im Besonderen haben. Dies führt zu Schamgefühlen, Missverständnissen und Unsicherheiten über den Körper der Frau. Ein fundiertes Wissen über den weiblichen Körper sollte nicht nur Frauenärztinnen bekannt sein, sondern jeder Frau.(3) Um der Unwissenheit entgegenzuwirken, wird in diesem Teilthema über die Anatomie des weiblichen Körpers aufgeklärt und informiert. 
+<br>
+<br>
+<h5>Die äußeren Geschlechtsorgane der Frau </h5>
+<br>
+Die Anatomie der äußeren weiblichen Genitalien ist in der Öffentlichkeit nur unzureichend bekannt. Zu diesem Ergebnis kam die internationale Vereinigung für Urogynäkologie mit einer Studie zur Untersuchung von dem Wissen der Öffentlichkeit über die Anatomie des äußeren weiblichen Genitals.(1) Das Unwissenheit wurde besonders deutlich, als die Teilnehmerinnen und Teilnehmer gebeten wurden ein Diagramm der weiblichen äußeren Genitalien zu beschriften. Von den 191 Teilnehmenden konnten lediglich 9 Prozent alle anatomischen Strukturen korrekt benennen. Die Unwissenheit über die Strukturen und die Funktion der äußeren weiblichen Genitalien kann laut der Studie erhebliche Auswirkungen auf die Gesundheitssuche, die gemeinsame Entscheidungsfindung und die Einwilligung nach Aufklärung haben.(4)
+Um diesen Auswirkungen entgegenzuwirken ist das Verständnis über die Strukturen der äußeren Geschlechtsorgane und deren Funktionen notwendig. 
+<br>
+Zu den äußerlich sichtbaren Geschlechtsorganen gehören der Venushügel, die großen und kleinen Schamlippen, der Scheidenvorhof, die Scheidenvorhofdrüsen und die Klitoris. Die äußeren Geschlechtsorgane werden auch als Vulva bezeichnet.
+Die Begrifflichkeit und die Funktionen der einzelnen Geschlechtsorgane der Vulva werden im folgenden Kapitel genauer betrachtet.(5)
+<br>
+<br>
+<h5>Die inneren Geschlechtsorgane der Frau </h5>
+<br>
+Der Großteil der weiblichen Geschlechtsorgane liegt im Inneren der Frau. Die inneren Geschlechtsorgane liegen im kleinen Becken, zwischen der Harnblase und dem Rektum. Zu diesen Geschlechtsorganen gehören die Vagina, die Gebärmutter, die Eileiter und die Eierstöcke. 
+
+
+<br>
+<br>
+Quellen: 
+(1) Schütz, Esther Elisabeth und Kimmich, Theo: Körper und Sexualität, Freiburg in Breisgau, Herder, 2001
+(2) https://www.bionity.com/de/lexikon/Geschlechtsmerkmal.html
+(3) De Liz, Dr. med. Sheila: Unverschämt. Alles über den fabelhaften weiblichen Körper, Hamburg bei Reinbek, Rowohlt Taschenbuch Verlag, 2019
+(4) El-Hamamsy, Dina, Parmar, Chanel, Shoop-Worrall, Stephanie und Reid, Fiona M.: Public understanding of female genital anatomy and pelvic organ prolapse (POP). A questionnaire-based pilot study. In: International Urogynecology Journal (2022). https://doi.org/10.1007/s00192-021-04727-9
+(5) https://www.visiblebody.com/de/learn/reproductive/female-reproductive-structures 
+
+
+
+
+
+
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-a">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/index.html">Home</a></li>
+           <li><a href="/impressum.html">Impressum</a></li>
+           <li><a href="/datenschutz.html">Datenschutz</a></li>
+           <li><a href="/barrierefreiheit.html">Barrierefreiheit</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>

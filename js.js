@@ -26,3 +26,19 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
 }
+
+
+$( document ).ready(function() {
+  // Handler for .ready() called.
+  $.get("data.json", function( data ){
+    let wb = data;
+    //let krzl, desc, leText;
+    $.each(wb.dict, function(item, hr){
+      krzl = item;
+      desc = hr;
+      var descr = wb.data[item]
+      var tplLink = '<li><a class="dropdown-item" href="#'+krzl+'">'+desc+'</a></li>'
+      $('#dropSelect  .dropdown-menu').prepend(tplLink)
+      var content = '<article id="'+krzl+'">'+ descr + '</article>'
+      $('#infos').append(content)
+    })})}); 

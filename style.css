@@ -63,6 +63,9 @@
   overflow-x: hidden;
 }
 
+.navbar-text {
+  text-align: right;
+}
 
 .btn {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -100,17 +103,22 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.content-box .content {
+
+
+.leText {
   overflow: hidden;
-  padding: 10px;
-  font-size: 15px;
-  margin-left: 70px;
-  margin-right: 70px;
-  height: auto; 
+  padding: 70px;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 50;
+  height: auto;
+  line-height: 20px;
+  width: auto; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  margin-bottom: 50px;
-  margin-bottom: 50px;
+  text-align: left;
+  
 }
 
 .content-a {
@@ -139,17 +147,32 @@
     padding-top: 60px;
   } */
 
-  
+
 
 .image-container {
-  width: 70%;
-  margin-top: 100px;
-  height: 500px;
-  object-fit: cover;
-  object-position: 50% 45%;
-  display: block;
-  overflow-x: hidden;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  height: auto;
+  padding: 100px;
+  width: 1480px;
+  position: relative;
+  overflow-y: hidden; 
+  overflow: hidden; 
+
+  
+  
 } 
+
+.aboutUs {
+  width: auto; 
+  text-align: center;
+  overflow-y:hidden; 
+  margin-right: 50px; 
+  position: relative; 
+  overflow: hidden; 
+  float:middle; 
+}
+
 
 
 
@@ -212,7 +235,7 @@ footer p { font-size:13px; color:rgb(0, 0, 0); padding-bottom:0px; margin-bottom
     visibility: visible;
 }
 
-footer {
+.footer {
     position: bottom;
     width: 100%;
     left: 0%; 

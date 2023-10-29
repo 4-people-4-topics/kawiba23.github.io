@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+
+          
+    
+        </script>
+        
+        <div class="content-box">
+        <div class="content-a">
+          <div class="title"> Die Eierstöcke und die Eileiter </div>
+        </div> 
+
+        <div class="leText">
+            Zwei weitere Bestandteile im weiblichen Fortpflanzungssystem sind die Eileiter und die Eierstöcke. Das Verständnis der beiden Geschlechtsorgane ist entscheidend für die Gesundheit und Fortpflanzungsfähigkeit von Frauen. Zudem kann das Verständnis über die anatomischen Merkmale und Funktionsweisen dazu beitragen, medizinische Probleme frühzeitig zu diagnostizieren und zu behandeln.
+            <br>
+            Die Eileiter (Tuben) erfüllen eine wesentliche Funktion im Fortpflanzungsprozess, da sie den Transport der befruchteten Eizelle in die Gebärmutter ermöglichen. Sie sind ein paariges muskuläres Hohlorgan in Form eines Schlauches, welche aus dem oberen Teil der Gebärmutter in die Bauchhöhle führen.  An den Enden der Eileiter befinden sich die Eileitertrichter, der von fransenförmigen Fortsätzen, den Fimbrien, besetzt sind und in die freie Bauchhöhle münden. Die Fimbrien des Eileitertrichters legen sich über jene Stelle der Eierstöcke, aus dem ein Ei heranreifen wird. Dadurch kann das Ei im Anschluss an den Eisprung aufgefangen und in den Eileiter geführt werden. Durch rhythmische Muskelkontraktionen des Eileiters und der Bewegung des Flimmerepithels auf seiner Schleimhaut wird die Eizelle zur Gebärmutter transportiert.(1)
+            Dieser Prozess kann durch Krankheiten beeinträchtigt sein, beispielsweise wenn sich Endometriose – Herde im Eileiter befinden oder als Folge einer Eileiterentzündung. Auch wenn der Krankheitsverlauf in der Regel mild ist, kann eine zu späte Diagnose zu Komplikationen, wie einer Entzündung des gesamten Eileiterbereiches und der Umgebung oder einer Bauchfellentzündung führen. Eine gefährliche Komplikation ist die Verklebung der Eileiter, welche eine Unfruchtbarkeit der Frau zu Folge haben kann. Eine weitere Erkrankung der Eileiter ist die Eileiterschwangerschaft, bei der eine Schwangerschaft außerhalb der Gebärmutter, in den Eileitern, stattfindet. Hierbei kommt es in der Regel zum Verlust der Schwangerschaft und weitere Schwangerschaften werden für die betroffenen Frauen erschwert. Da die Eileiter für die Entstehung einer Schwangerschaft von großer Bedeutung ist, sollten sich Frauen bei Beschwerden schnellstmöglich einer gynäkologischen Untersuchung unterziehen.(2,3,4)
+            Neben den Eileitern sind die Eierstöcke ebenfalls wichtig für die Schwangerschaft, da das Heranwachsen der Eizelle vor dem Eisprung in den Eierstöcken stattfindet. Am Ende der Reifungsphase, wird eine der Eizellen aus dem Eierstock befördert, von den Eileitertrichtern aufgefangen und in den Eileiter transportiert. In den Eileitern findet anschließend die Befruchtung durch ein Spermium statt. Die Produktion der Eizellen endet mit dem letzten Menstruationszyklus der Frau, der Menopause.(1,4)
+            Unwissenheit oder Fehlinformationen über die Eierstöcke können ebenfalls gesundheitliche Folgen haben. Eine gefährliche Eierstockerkrankung ist beispielsweise der Eierstockkrebs. Der Krebs verursacht keine Schmerzen und lange Zeit keine Symptome. Das Universitäts Spital Zürich erklärt, dass der Krebs aus diesem Grund in vielen Fällen erst zu spät erkannt wird. Die Gefahr, dass er zum Zeitpunkt der Diagnose bereits auf umliegende Organe übergegriffen hat, sei groß.(1) Eine weitere Erkrankung der Eierstöcke ist die Eierstockzyste. In den meisten Fällen wird die Bildung einer Eierstockzyste durch Hormonstörungen verursacht. Diese kann dazu führen, dass das Einreißen der Follikelmembran vor dem Eisprung ausbleibt und dadurch der Eisprung nicht stattfinden kann. Prof. Med. Dr. Eva – Marie Grischke sieht die Gefahr bei der Eierstockzyste vor allem darin, dass diese in einigen Fällen keine Beschwerden bei der Patientin verursacht. Somit werde sie oftmals nur durch Zufall im Rahmen einer gynäkologischen Untersuchung mit dem Ultraschall entdeckt.(4) Über eine weitere Folge der Unwissenheit klärt Dr. Med. Sheila de Liz auf. Sie erklärt, dass das Fehlen eines Eierstockes keine Auswirkung auf die Schwangerschaft habe, solange noch beide Eileiter vorhanden sind. Es ist irrelevant, ob die Eizelle von dem linken ober dem rechten Eierstock stammt, da die Eileiter in der Lage sind jede Eizelle aufzufangen.(2)
+            <br>
+            Das Wissen über die Eileiter und die Eierstöcke ist entscheidend für ein aufgeklärtes Verständnis über das Fortpflanzungssystem der Frau. Außerdem sind Routineuntersuchungen wichtig, da Erkrankungen, wie der Eierstockkrebs, oft symptomfrei sind. Diese können zur Früherkennung von Erkrankungen und deren rechtzeitiger Behandlung beitragen. 
+            <br>
+            <br>
+            Quellen: 
+            (1) Schütz, Esther Elisabeth und Kimmich, Theo: Körper und Sexualität, Freiburg in Breisgau, Verlag Herder, 2001
+            (2) Dr. med. Sheila de Liz: Unverschämt. Alles über den fabelhaften weiblichen Körper, Hamburg bei Reinbek, 2019
+            (3) https://www.kenhub.com/de/library/anatomie/weibliche-geschlechtsorgane
+            (4) https://www.leading-medicine-guide.com/de/anatomie/eierstoecke
+            
+             
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-a">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/index.html">Home</a></li>
+           <li><a href="/impressum.html">Impressum</a></li>
+           <li><a href="/datenschutz.html">Datenschutz</a></li>
+           <li><a href="/barrierefreiheit.html">Barrierefreiheit</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>
