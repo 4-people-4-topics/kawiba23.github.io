@@ -86,7 +86,13 @@
 }
 
 
-
+.content-boxL {
+  padding: 50px; 
+  width: auto; 
+  margin: 70px; 
+  margin-bottom: 50px; 
+  margin-top: 200px;
+}
 
 .content-box .title {
   padding: 50px;

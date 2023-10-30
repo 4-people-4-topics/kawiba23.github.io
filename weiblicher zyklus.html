@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+        </script>
+        
+        <div class="content-box">
+        <div class="content-m">
+          <div class="title"> Der weibliche Zyklus</div>
+        </div> 
+
+        <div class="leText">
+          <div class="content"> Der weibliche Zyklus ist ein wiederkehrendes Ereignis, welches mit dem ersten Tag der Periode beginnt. Dadurch wird die erste Phase des Zyklus, die Follikelphase, einleitet, welche bei jeder Frau unterschiedlich lang andauern kann. Im Durchschnitt sind es ungefähr zwölf bis vierzehn Tage. Die Länge eines kompletten Zyklus kann zwischen 24 und 37 Tagen variieren.(1,2,3)
+            <br>
+            <br>
+            Die erste Zyklushälfte – die Follikelphase
+            <br>
+            <br>
+            Der erste Tag des Zyklus ist auch der erste Tag der Periode. Somit stellt sich die Frage, welche Funktion die Menstruationsblutung hat. <br>
+            Die Menstruationsblutung geschieht, da sich die Schleimhaut der Gebärmutter löst und abgegeben wird. Der eigentliche Nutzen der Schleimhaut ist die Vorbereitung auf eine Schwangerschaft, damit sich eine befruchtete Eizelle einnisten und zu einem Embryo entwickeln kann. Wird keine Eizelle befruchtet, wird die Schleimhaut zur Einnistung nicht gebraucht und Teile davon werden abgestoßen. Sie verlässt den Uterus als dickes zähflüssiges Blut. Durch Hormone in unserem Körper kann die Gebärmutter mit dem Gehirn kommunizieren. Das Gehirn kann die Information erhalten, ob eine Schwangerschaft besteht und anschließend Signale an die Gebärmutter senden. Erhält die Gebärmutter das Signal für die Ausscheidung der Schleimhaut, sinkt die Konzentration der Geschlechtshormone Progesteron und Östrogen im Blut. Die Drüsen des Gewebes kollabieren und die Verbindungen von Zellen und Blutgefäßen lockern sich. Der gesamte Feinaufbau der Schleimhautstruktur wird zerstört. Sie beginnt zu zerfließen, wodurch es zu Blutungen kommt und ein neuer Zyklus beginnt.(1)<br>
+            Die Dauer der Menstruation ist sowohl abhängig von den Lebensumständen als auch von dem Lebensabschnitt, in dem sich eine Frau gerade befindet und kann zwischen drei bis sieben Tagen schwanken. Die Menge an Blut, die Sie während einer Blutung verliert, beträgt zwischen 50 und 80 Milliliter. Das meiste Blut verliert die Frau während der ersten Tage. Die Menge entspricht ungefähr zwei Dritteln des gesamten Blutes eines Zyklus. Es handelt sich um dickes, nicht gerinnendes Blut und das nährstoffreichste, was unser Körper vorzuweisen hat. Außerdem beinhaltet es viele Stoffe, wie zum Beispiel Kupfer, Eisen, Eiweißstoffe und Vitamine. Reich an den Stoffen ist es deswegen, weil es ursprünglich geschaffen wurde, damit sich ein Embryo darin entwickeln kann.(2)<br>
+            Die Eizellen liegen in den Eierstöcken, welche sich recht und links von der Gebärmutter befinden. Noch während der Menstruation, wird das Wachstum neuer Eizellen durch das follikelstimulierende Hormon (FSH) angeregt. Das FSH führt die Eizellen und ihre Follikel herbei um einen Wachstumsschub zu starten. Während der letzten Tage einer Periode und den anschließenden Tagen wird der Follikel mit der größten Stabilität ausgewählt. Dadurch ergibt sich die Auswahl der Eizelle, die bereit für den Sprung in die Gebärmutter ist. Die stabilste Eizelle springt und der Rest bleibt im Eierstock zurück. Der schützende Follikel sorgt für die Eizelle vor und produziert bereits im Eierstock Östrogen. Je größer der Follikel, desto mehr Östrogen wird produziert und ins Blut abgegeben. Deswegen steigt der Hormonspiegel im Blut täglich stärker an. Zudem ist es wichtig für das Wachstum der Gebärmutterschleimhaut beim Eisprung. Östrogen sorgt ebenfalls dafür, dass die Gebärmutter vollständig auf die Geburt eines Embryos vorbereitet ist, wenn eine Eizelle nach dem Eisprung befruchtet wird. Eventuell befruchtete Eizellen sollen sich in der Gebärmutterschleimhaut einnisten können. Da der Ablauf des Follikelwachsens so exakt ist, baut sich meistens nur in einem der zwei Eierstöcke Eines aus. Die Chance auf Zwillinge oder Drillinge wird dadurch minimiert, dass mehrere einsatzfähige Eizellen benötigt werden, die zur Befruchtung bereit sind. Das Östrogen, was von dem Follikel gebildet wird, gelangt durch das Blut zur Gebärmutter. Die Schleimhautzellen, die während der Periode rausgeblutet werden, bilden sich wenige Tage nach Ende der Menstruation wieder neu, so dass es wieder eine funktionierende Schleimhaut gibt. Im Zeitraum von der Monatsblutung bis zu dem nächsten Eisprung wächst diese Schicht in der Gebärmutterhöhle auf etwa vier Millimeter an.(1)
+            <br>
+            <br>
+            Der Eisprung
+            <br>
+            <br>
+            Damit die Eizelle den Eierstock verlassen kann, um zu dem Eileiter zu springen, muss sie sich von dem schützenden Follikel lösen. Das Hypophysen Hormon LH (luteinisierendes Hormon), bewirkt das die Follikelzellen sich lösen und durchlässig machen. Während dieses Prozesses entsteht eine Lücke in der Wand des Eierstocks, durch diese dann die reife Eizelle in die Bauchhöhle gelangt. Sie gelangt nicht direkt vom Eierstock zu dem Eileiter, da die beiden Geschlechtsorgane nicht miteinander verbunden sind. Die Eizelle befindet kurzzeitig in der Bauchhöhle, bis sie von dem Eileiter aufgenommen wird. Das funktioniert nur, weil der zurückgelassene Follikel Botenstoffe aussendet, die von dem Eileiter erkannt werden. Nachdem die Eizelle aus dem Eierstock freigesetzt wurde, schließt sich der Follikel. Der nach dem Eisprung nicht genutzte Follikel wird als Gelbkörper oder Corpus luteum bezeichnet, da sich in diesem gelbliche Pigmentzellen ablagern. Der Zeitraum vom Eisprung bis zum Ende des Zyklus, die zweite Zyklushälfte, wird daher auch als Lutealphase, beziehungsweise Gelbkörperphase, bezeichnet.(1,4)<br>
+            <br>
+            Die zweite Zyklushälfte – Lutealphase
+            <br>
+            <br>
+            Die reife Eizelle wird nun durch den Eileiter zur Gebärmutterhöhle transportiert. Nach dem Eisprung kann eine Eizelle innerhalb von zwölf bis vierundzwanzig Stunden befruchtet werden.(1)<br>
+            Die Körpertemperatur, die direkt nach dem Aufstehen gemessen wird nennt man Basaltemperatur. Während dem Zyklus kann sie genutzt werden, um die fruchtbaren und unfruchtbaren Tage zu bestimmen. Nach dem Eisprung steigt die Basaltemperatur um 0,3 bis 0,5 Grad Celsius, durch das von den Gelbkörpern produzierte Hormon Progesteron, an. Das Hormon dient zum Erhalt einer eventuellen Schwangerschaft. Wird die Eizelle jedoch nicht befruchtet, bildet sich der Gelbkörper zurück und die Hormonproduktion wird stark reduziert. Sowohl der Östrogen-, als auch der Progesteronspiegel sinken im Blut ab. Daraufhin beginnt das Zersetzen der aufgebauten Schleimhaut und der Zyklus beginnt erneut.(3)
+            <br>
+            <br>
+            Quellen: <br>
+            (1) Srömer, Luisa und Eva: Ebbe und Blut. Alles über die Gezeiten des weiblichen Zyklus, München, Gräfe und Unzer, 2017
+            (2) Frei, Franka: Periode ist politisch. Ein Manifest gegen das Menstruationstabu, München, Heyne, 2020
+            (3) Schütz, Esther Elisabeth und Kimmich, Theo: Körper und Sexualität, Freiburg in Breisgau, Herder, 2001
+            (4) https://www.gesundheit.gv.at/labor/laborwerte/hormone-tumormarker/luteinisierendes-hormon.html#:~:text=Bei%20Frauen%20bewirkt%20das%20Hypophysenhormon,Labormessgr%C3%B6%C3%9Fe%20im%20Rahmen%20der%20Fertilit%C3%A4tsdiagnostik
+            
+             </div>
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer" id="footer-m">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-m">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/kawiba23/index.html">Home</a></li>
+           <li><a href="/kawiba23/impressum.html">Impressum</a></li>
+           <li><a href="/kawiba23/datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>

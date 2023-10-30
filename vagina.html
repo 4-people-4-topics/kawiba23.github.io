@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+
+          
+    
+        </script>
+        
+        <div class="content-box">
+        <div class="content-a">
+          <div class="title"> Die Vagina </div>
+        </div> 
+
+        <div class="leText">
+            Ein offenerer und informativerer Ansatz in Bezug auf die Vagina ist notwendig, um Frauen in Bezug auf ihren Körper und die Wahl der Verhütungsmethode zu stärken und aufzuklären. Zu diesem Ergebnis kam eine internationale Umfrage des „Nationalen Zentrums für Biotechnologie – Informationen“ der USA, welche 9441 Frauen zu ihren Einstellungen, Wahrnehmungen und Kenntnisse über die Vagina befragte. Die Mehrheit der Frauen (66 Prozent) war der Meinung, dass der vaginalen Gesundheit nicht die Aufmerksamkeit zuteil wird, die sie verdient und 65 Prozent sagten, dass die Gesellschaft zu viele falsche Vorstellungen über die Vagina hat. 78 Prozent stimmten zu, dass die gesellschaftlichen Tabus, welche die Vagina umgeben, zur Unwissenheit der Frauen über ihren Körper beitragen.(1) Die Studie zeigt, dass es trotz Fortschritte in der medizinischen Aufklärung und der sexuellen Bildung nach wie vor eine erhebliche Unwissenheit über die Vagina gibt. Ein aufgeklärter Wissensstand über dieses Geschlechtsorgan ist jedoch von großer Bedeutung für die Frau und das Verständnis über den weiblichen Körper, da die Vagina vielseitige Funktionen bei der Menstruation, dem Geschlechtsverkehr, der Geburt und der allgemeinen Gesundheit und Hygiene der Frau hat. <br>
+Die Vagina, auch Scheide genannt, ist der Kanal zwischen der Vulva und dem Gebärmutterhals. Somit stellt sie die Verbindung zwischen den äußeren und inneren Geschlechtsorganen her. Bei der Vagina handelt es sich um einen dünnwandigen Muskelschlauch mit einer durchschnittlichen Länge von 8 bis 12 Zentimetern. Als Durchgangskanal übernimmt sie im Körper der Frau verschiedene Funktionen. Durch die Vagina tritt während der Menstruation das Menstruationsblut aus und nach der Ejakulation gelangen Spermien durch die Vagina über den Gebärmutterhals in die Gebärmutter. Zudem ist sie ist sehr dehnbar, wodurch sie beim Geschlechtsverkehr den Penis des Sexualpartners aufnehmen und während der Entbindung als Geburtskanal fungieren kann. Trotz ihrer Dehnbarkeit ist das ungewollte Herausgleiten eingeführter Hygieneprodukte, wie Tampons oder Menstruationstassen, fast nicht möglich. Dies wird durch die Vaginalwand ermöglicht, welche im neutralen, nicht erregten Zustand durch die umliegenden Organe komprimiert wird und somit beweglichen Halt und Druck bietet.  Außerdem bildet die Vaginalwand zahlreiche Falten, die es ihr ermöglichen, sich zu erweitern, wenn Druck auf die Seiten ausgeübt wird. Ihre Dehnbarkeit wird durch die verschiedenen Gewebeschichten der Vaginalwand verstärkt. Die Oberflächenschichten der Vaginalwand bestehen aus Schleimhautgewebe, worunter sich Schichten aus glattem Muskelgewebe, Kollagen und elastischen Fasern befinden. Durch ihre Anatomie ist die Vagina in der Lage sich bei einer sexuellen Erregung bis auf die doppelte Länge auszudehnen. Außerdem wird dabei durch die Vaginalwand Flüssigkeit freigesetzt, um den Bereich feucht zu halten und bei sexueller Erregung die Lubrikation zu erhöhen. Zudem kann die Vagina durch die Vaginalwand bestimmte Substanzen wie zum Beispiel Medikamente, Hormoncremes oder Verhütungsmittel in den Körper aufzunehmen.(2,3,4)<br>
+Die Physiologie der Vagina verändert sich im Laufe des Lebens einer Frau.  Die größten Veränderungen finden mit der Schwangerschaft, sowie der Menarche und der Menopause statt. Regelmäßige Veränderungen gibt es während des Menstruationszyklus. Diese sind auf eine Schwankung des Östrogenspiegels zurückzuführen. In der Mitte des Zyklus, wenn der Östrogenspiegel am höchsten ist, wird das Vaginalgewebe dicker und voller. Zudem ist der Östrogenspiegel im Körper während der reproduktiven Jahre nach der Menarche und vor der Menopause erhöht, wodurch mehr Gewebeschichten vorhanden sind, welche die Vagina auskleiden. Die Vagina wird auch durch den veränderten Hormonspiegel während der Schwangerschaft beeinflusst. Die Produktion von Östrogen und Progesteron steigt an, wodurch die Gebärmutterschleimhaut verdickt wird, damit sich ein befruchtetes Ei einnisten kann. Während der Schwangerschaft lockert sich das Bindegewebe der Vaginalwand allmählich, um sich auf die Geburt des Kindes vorzubereiten.  Während der Entbindung weitet sich die Vagina vorübergehend, doch 6 bis 12 Wochen nach der Entbindung nimmt die Vagina wieder die Größe an, die sie vor der Schwangerschaft hatte. Während der Menopause tritt eine letzte bedeutende Veränderung auf, da der Östrogenspiegel sinkt und folglich die Vaginalwand dünner wird. Daraus entstehende Symptome wie Scheidentrockenheit oder geringere Vaginalsekrete können zu Unbehagen beim Sex führen und das Risiko für Vaginalreizungen und Infektionen erhöhen.(4,5) Darüber hinaus findet eine altersbedingte Veränderung der Vagina mit zunehmendem Alter einer Frau statt, da die Vaginalwand lockerer und der Durchmesser der Vagina größer wird. Obwohl dies ein weit verbreiteter Irrtum ist, hat die Größe der Vagina auf die sexuelle Funktion keinen Einfluss. Die Muskulatur des Beckenbodens, die um den Vaginalboden liegt, bestimmt die Enge des Vaginalkanal beim Sex. <br>
+Die Risikoerhöhung für Scheidenreizungen und Infektionen durch geringe Vaginalsekrete hängt mit der Scheidenflora und ihrer Bedeutung für die Gesundheit der Vagina zusammen. Eine gesunde Vagina hat eine Scheidenflora, die viele Bakterien enthält.(6) Der pH-Wert einer gesunden Vagina liegt unter 4,5. Die Scheidenflora ist somit deutlich saurer als die restliche Haut, deren pH-Wert etwa 5,5 beträgt. Aufgrund des sauren Scheidenmilieus ist es für Krankheitserreger, wie Pilze und Bakterien, schwer, sich zu vermehren und die Vagina, sowie die umliegenden Organe, werden geschützt. Äußere Einflüsse können die natürliche und gesunde Zusammensetzung der Scheidenflora stören. Das kann beispielsweise bei der Einnahme von Antibiotika der Fall sein, da Antibiotika die Zusammensetzung der Bakterienstämme in der Vagina schädigen können. Dazu kann es ebenso durch die Einnahme von Hormonpräparaten, wie der Anti-Baby-Pille, kommen. Die Gynäkologin Dr. med. Alyssa Dweck warnt auch davor, dass Seifen, Sprays oder Scheidenspülungen im Intimbereich die Scheidenflora negativ beeinträchtigen und Reizungen oder Infektionen hervorrufen können. Die äußeren Genitalien und die Vagina sollten nur mit Wasser gereinigt werden, da sich eine gesunde Vagina von selbst reinigt. Letztlich können auch Erkrankungen, wie Immunschwächekrankheiten oder Diabetes ungünstige Einflüsse auf die Scheidenflora haben.(2,7)<br>
+Eine Störung der gesunden Scheidenflora ist oftmals Ursache für vaginale Krankheiten oder Infektionen. Bei einigen Erkrankungen, wie der vaginalen Infektion oder dem Scheidenpilz, verspüren Frauen Beschwerden wie einen Juckreiz oder Rötungen. Bei eindeutigen Symptomen oder Beschwerden sollte eine gynäkologische Praxis aufgesucht werden, damit Erkrankungen diagnostiziert und behandelt werden, bevor sich die Krankheitserreger verbreiten. Außerdem sind Vorsorgeuntersuchungen von großer Bedeutung, um Krankheiten rechtzeitig zu diagnostizieren. Diese sind wichtig für die Gesundheit der Frau, da es Erkrankungen, wie den Scheidenkrebs gibt, die keine oder verspätete Krankheitszeichen haben und somit oftmals erst im fortgeschrittenen Stadium identifiziert werden. <br>
+Nicht alle Erkrankungen der Vagina erfolgen jedoch exogen. Eine Erkrankung, die keinen Virus oder Pilz als Auslöser hat ist der Vaginismus. Der Vaginismus ist eine psychosomatische Erkrankung, bei welcher eine ungewollte Verkrampfung der Muskulatur im Beckenbodenbereich der Frau besteht.(2,8) <br>
+Für ein aufgeklärtes Verständnis des weiblichen Fortpflanzungssystems und des Körpers einer Frau, ist das Wissen über die Vielfalt und die Komplexität der Vagina essentiell. Als Verbindung zwischen den inneren und äußeren Geschlechtsorganen ermöglicht die Vagina wichtige Prozesse, wie die Menstruation, den Geschlechtsverkehr und die Schwangerschaft. Zudem ist die Kenntnis über Scheidenflora wichtig, für eine gesunde Pflege des Geschlechtsorgans und dem Vermeiden von Krankheiten und Infektionen.
+<br>
+<br>
+Quellen: 
+(1) Nappi, Liekens, Brandenburg. 2000. Attitudes, perceptions and knowledge about the vagina: The International Vagina Dialogue Survey. Contraception, Vol. 73, Ausgabe 5
+(2) https://www.leading-medicine-guide.com/de/anatomie/vagina
+(3) https://www.kenhub.com/de/library/anatomie/weibliche-geschlechtsorgane; 07.10.2023
+(4)https://helloclue.com/de/artikel/anatomie/alles-ueber-die-vagina-anatomie-und-entwicklung-im-laufe-der-zeit
+(5) Farage, Miranda und Maibach, Howard: Lifetime changes in the vulva and vagina. In: Archives of Gynecology and Obstetrics 273 (2006)
+(6) https://www.uniklinikum-jena.de/frauenheilkunde/Lexikon+Gyn%C3%A4kologie.html
+(7) Dweck, Alyssa Dr. med. und Westen, Robin: Die wunderbare Welt der Vagina und Vulva. Antworten auf all deine Fragen zu Menstruation, Zyklus, Sex und mehr, Beverly (USA), 2017
+(8) https://www.mediclin.de/ratgeber-gesundheit/innere-organe-stoffwechsel/gynaekologische-tumoren/#scheidenkrebs 
+
+
+
+            
+          
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-a">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/kawiba23/index.html">Home</a></li>
+           <li><a href="/kawiba23/impressum.html">Impressum</a></li>
+           <li><a href="/kawiba23/datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>

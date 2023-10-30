@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+        </script>
+        
+        <div class="content-box">
+        <div class="content-m">
+          <div class="title"> Das Prämenstruelle Syndrom</div>
+        </div> 
+
+        <div class="leText">
+          <div class="content"> Das prämenstruelle Syndrom, kurz PMS, weist auf unterschiedliche physische und psychische Veränderungen hin, die durch den weiblichen Hormonhaushalt auftreten können. Sie treten während der zweiten Hälfte des Menstruationszyklus, in der Lutealphase, auf. Diese Phase beschreibt den Zeitraum nach dem Eisprung bis zu den Tagen vor dem Einsetzen der Periode. Rund 80 Prozent der Frauen im geschlechtsreifen Alter sind von einer leichten Form des PMS betroffen. Drei bis acht Prozent der Frauen sind an einer schwereren Form des PMS, genannt prämenstruelle Dysphorie oder die prämenstruelle dysphorische Störung (PMDS), erkrankt.(1,2)
+            <br><br>
+            Ursachen des PMS
+            <br><br>
+            Trotz langjährigen Forschungen sind die genauen Ursachen für die Beschwerden beim PMS noch nicht hinreichend bekannt.
+            Jedoch wird bei der Vielfalt der Symptome eine einzige Ursache ausgeschlossen. Es handelt sich stattdessen um eine Störung, die durch mehrere Faktoren verursacht wird.  Daher bezeichnen viele Wissenschaftler das prämenstruelle Syndrom heute als psychoendokrine Dysfunktion. Dabei handelt es sich um eine Fehlfunktion, deren Ursachen in der Psyche, dem Nervensystem, aber auch in dem Hormonhaushalt zu finden sind. Es wird angenommen, dass zyklische Veränderungen der Geschlechtshormone die Produktion und Aktivität von anderen Hormonen und Neurotransmittern beeinflussen. Dies betrifft insbesondere den Neurotransmitter Serotonin, dessen Konzentration aufgrund von hormonellen Veränderungen im Menstruationszyklus variiert. Nach dem Eisprung verringert sich der Anteil des Nervenboten im Körper. Kurz vor dem Beginn der Menstruation verringert er sich noch stärker. (3)
+            Die Ursachen des PMS können während der zweiten Zyklushälfte, der Lutealphase ansteigen. Es wird viel Progesteron produziert und weniger Östrogen abgegeben, wodurch können PMS-typische körperliche und seelische Beschwerden bei einer entsprechenden Belastung oder Veranlagung auftreten. Des Weiteren steigt das Hormon Prolaktin an, welches während der Gelbkörperphase in der Hypophyse gebildet wird. Es kann zu unangenehmen Schmerzen führen, da dies zu einem Anschwellen der Brustdrüsen (Mastodynie) führt.
+            Was jedoch wissenschaftlich bewiesen ist, sind Faktoren, die das PMS begünstigen. Darunter fallen zum Beispiel zu viel Zucker, Koffein, Nikotin und Alkohol sowie Schlaf- und Bewegungsmangel.(4)
+            <br><br>
+            Symptome
+            <br><br>
+            In medizinischer Fachliteratur wird oft von bis zu 150 Symptomen auf physischer und psychischer Ebene gesprochen. Diese Beschwerden können sowohl einzeln, als auch zusammen auftreten und sind Ausdruck dessen, was in weiblichen Körpern vor sich geht.
+            Bekannte physische Symptome sind beispielsweise: Unterleib-, Rücken-, Brust- oder Kopfschmerzen. Es können auch Magen-Darm-Beschwerden auftreten wie Verdauungsstörungen und Durchfall. Des Weiteren können Frauen unter unreiner Haut, Gewichtszunahme oder Kreislaufproblemen leiden.(2,5)
+            Psychische Symptome können Stimmungsschwankungen, Gereiztheit, Angstzustände oder depressive Verstimmungen sein. Das Gefühl der Überforderung kann erhöht sein, Müdigkeit und Abgeschlagenheit sind auch keine unbekannten Zustände.
+            <br><br>
+            Verschiedene PMS-Typen
+            <br><br>
+            Grundsätzlich werden bei dem PMS in vier Typen unterschieden. PMS-Typ A: Anxiety, PMS-Typ C: Craving, PMS-Typ D: Depression und PMS-Typ H: Hyperhydration. 
+            Das PMS-Typ A steht im übertragenen Sinne nicht nur für Angst, sondern auch für Kontrollverlust. Verantwortlich dafür ist das Stresshormon Adrenalin. Es wird vermehrt ausgeschüttet, wenn der Östrogenspiegel erhöht und der Spiegel des Progesterons verringert ist. Dadurch herrscht ein Ungleichgewicht. Neben dem vermehrt ausgeschütteten Adrenalin, gibt es nur eine geringe Produktion des Glückshormons Dopamin.  Die Konsequenz daraus sind unter anderem Stimmungsschwankungen und Angstgefühle.
+            Ursache für den PMS-Typ H, kann ebenfalls ein erhöhter Östrogenspiegel sein. Dadurch wird mehr Serotonin freigesetzt. Das Hormon erhöht die Durchlässigkeit der Blutgefäße und unterstützt somit die Bildung von Ödemen im Gewebe. Außerdem wird die Produktion von Aldosteron unterstützt, welches die Flüssigkeitsausscheidung in den Nieren reduziert. Dadurch verbleibt mehr Wasser im Körper und es kommt zu Wassereinlagerungen.
+            Es wird angenommen, dass der Blutzuckerspiegel von Typ C in der Lutealphase stark abfällt. Dadurch kann es beispielsweise zu Heißhungerattacken oder einen angeregten Appetit kommen.
+            Der PMS-Typ D ist gegensätzlich zu PMS-Typ A, da es hier zu einem hohen Progesteron-Überschuss kommt und Östrogen ist zu wenig vorhanden. Auslöser hierfür können Stress oder Nährstoffmangel sein, welche zu einer depressiven Verstimmungen führen können.(6)
+            <br><br>
+            Behandlungsmöglichkeiten
+            <br><br>
+            Es gibt verschiedene Methoden, um die Auswirkungen zu lindern und das Wohlbefinden zu verbessern. Da nicht alle Betroffenen gleichermaßen unter den Symptomen leiden, können Maßnahmen unterschiedlich gut wirken. In der Regel bestehen Optionen zur Therapie, aus einer Verbesserung des Lebensstils und einer Veränderung des Alltags. Ausreichend Schlaf, ein geregelten Alltagsrhythmus, sowie beständige sportliche Aktivitäten und einer ausgewogenen gesunden Ernährung sind oftmals eine ausreichende Vorsorge. Außerdem kann der Verzicht auf Koffein, Nikotin und Alkohol Beschwerden dämmen. Zudem sollte der Verzehr von Zucker und Salz minimiert werden, um damit Symptomen wie Wassereinlagerungen und Brustspannen entgegenzuwirken. Für Frauen die unter starken Beschwerden leiden gibt es weitere Möglichkeiten, die in Rücksprache mit einem Arzt beraten werden. Eine Möglichkeit wären hormonelle Verhütungsmittel, wie zum Beispiel die Pille, die dabei hilft, Hormonschwankungen zu unterdrücken. Schmerzmittel, wie zum Beispiel Ibuprofen oder Diclofenac können bei starken Kopf-, Rücken- oder Bauchschmerzen eingenommen werden. Wenn psychische Auswirkungen nicht ausgehaltbar sind, können in Extremfällen auch Antidepressiva verschrieben werden.
+            Insgesamt gibt es vielseitige Behandlungsmöglichkeiten, die von der Naturheilkunde bis zur Einnahme verschiedener Hormone reichen. Zu beachten ist, dass eine Frau auf ihren Körper achtet und auf ihre Bedürfnisse hört, damit ein sinnvoller Therapieansatz entstehen kann.(5) 
+            <br><br>
+            Quellen: <br>
+            (1) Birgit, Bigga: Das Prämenstruelle Syndrom. Eine empirische Untersuchung des psychosomatischen Zusammenhangs, diplom.de, 2002
+            (2) Maier, Sabine: Das Buch der Tage. Ein Tagebuch für Frauen, Wien, Wundergarten, 2018
+            (3) https://www.frauenaerzte-im-netz.de/erkrankungen/praemenstruelles-syndrom-pms/ursachen/#:~:text=Beim%20PMDS%20ist%20inzwischen%20eine,Eisprung%20und%20der%20einsetzenden%20Regelblutung
+            (4) https://www.tk.de/techniker/gesundheit-und-medizin/behandlungen-und-medizin/gynaekologische-und-urologische-erkrankungen/praemenstruelles-syndrom-pms-nervige-tage-vor-den-tagen-2017314?tkcm=aaus
+            (5) Srömer, Luisa und Eva: Ebbe und Blut. Alles über die Gezeiten des weiblichen Zyklus, München, Gräfe und Unzer, 2017
+            (6) https://www.agnucaston.de/pms-typen
+            
+             </div>
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer" id="footer-m">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-m">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/kawiba23/index.html">Home</a></li>
+           <li><a href="/kawiba23/impressum.html">Impressum</a></li>
+           <li><a href="/kawiba23/datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>

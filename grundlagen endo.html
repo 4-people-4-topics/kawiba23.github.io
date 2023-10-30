@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+        </script>
+        
+        <div class="content-box">
+        <div class="content-e">
+          <div class="title"> Anatomische Grundagen </div>
+        </div> 
+
+        <div class="content-box">
+          <div class="leText"> Endometriose ist eine chronische Erkrankung, bei der sich Gebärmutterschleimhaut außerhalb der Gebärmutterhöhle ansiedelt, beispielsweise im Bauchraum, an den Eierstöcken, Eileitern oder am Bauchfelll im kleinen Becken. Schätzungsweise zwei Millionen Frauen sind in Deutschland an Endometriose erkrankt, oft ohne zu wissen, dass sie von dieser Krankheit betroffen sind. Endometriose-Spezialisten gehen von bis zu 40.000 Neuerkrankungen pro Jahr in Deutschland aus, trotzdem vergehen bis zu einer Diagnosestellung oft bis zu zehn Jahre, in denen die Betroffenen starke Schmerzen haben und ihre Lebensqualität enorm eingeschränkt ist. Um diese Zeit zu verkürzen und die Gesellschaft für Endometriose zu sensibilisieren, sind Aufklärung über die Erkrankung und ihre Symptome und mögliche Früherkennungsuntersuchungen besonders wichtig. Diese Arbeit soll dazu beitragen, diese Informationen zu sammeln und zu verbreiten.  Um zu verstehen, wie Endometriose entsteht, ist es unerlässlich den Bau der Gebärmutter zu betrachten.(1,2)<br>
+            <br><br>
+            Der Bau der Gebärmutter
+            <br><br>
+            Die Gebärmutter besteht aus drei Schichten. Im Inneren des Uterus, in der Gebärmutterhöhle (Cavum uteri) befindet sich die Gebärmutterschleimhaut, das Endometrium. Dieses wächst und verdickt sich während des Menstruationszyklus und wird, wenn keine Schwangerschaft eintritt, abgestoßen.(3) Die mittlere Schicht, das Myometrium, ist die dickste Schicht der Gebärmutter und besteht aus glatten Muskeln, die während der Menstruation kontrahieren, um die abgebaute Gebärmutterschleimhaut als Monatsblutung abzustoßen und während der Geburt, um das Baby duch den Geburtskanal zu bewegen.(4) Auch in der Gebärmuttermuskelwand können Endometrioseherde vorkommen, dies bezeichnet man als Adenomyose. Endometriose und Adenomyose liegen in bis zu 80 Prozent der Fälle in Kombination vor. Bei ausgeprägter Adenomyose kann die muskuläre Funktion der Gebärmutter gestört sein, was zu Beschwerden bei der Monatsblutung führen kann und auch bei der Geburt. An der Außenseite wird die Gebärmutter von einer dünnen Bindegewebsschicht, dem Peritoneum (Bauchfell) bedeckt. Diese Schicht heißt Perimetrium und sie verbindet die Gebärmutter mit anderen Organen im Becken.(5) Der Name Endometriose leitet sich vom griechischen Wort Endometrium für Gebärmutterschleimhaut ab. Ebenso wie die Gebärmutterschleimhaut verhalten sich auch Endometrioseherde: sie werden in der ersten Zyklushälfte aufgebaut und am Ende eines Zyklus abgestoßen.(6) Außerdem können sie in den Bauchraum abbluten.(1,7)<br>
+            Wenn das Blut nicht abfließen kann muss es resorbiert werden, es entsteht eine Entzündungsreaktion und in der Folge eine Verwachsung.
+            <br>
+            Wie es zu der Abwanderung von Gebärmutterschleimhaut und zur Entstehung von Endometrioseherden kommt, ist nicht endgültig geklärt. Es gibt verschiedene Theorien, vermutlich gibt es eine erbliche Komponente, allerdings spielt auch das Immunsystem eine wichtige Rolle. Es gibt auch noch weitere Faktoren, wie eine mögliche Beteiligung der Lymphbahnen. Die Anzahl der Regelblutungen spielt ebenfalls bei der Endometrioseentwicklung eine große Rolle. Inwiefern diese Faktoren aber zusammenspielen und welche Einflüsse es noch gibt, ist noch unklar. Eine Frau hat in der heutigen Zeit etwa 500 Regelblutungen in ihrem Leben.(8) Im 19. Jahrhundert bekamen Mädchen ihre erste Regelblutung (Menarche) mit etwa 17 Jahren, heute bekommen Mädchen ihre Menarche meist mit etwa 12 oder 13 Jahren.(9) Zusätzlich ist seit dem 19. Jahrhundert die Lebenserwartung der Frauen um etwa 11 Jahre(10) gestiegen und die Geburtenrate von 4,7 Kindern auf 1,4 Kinder je Frau gefallen.(11) Frauen werden heute im Durchschnitt wesentlich älter, bekommen ihre Menstruation eher und erst später Kinder. Eine Frau, die mit 30 Jahren schwanger wird, hatte also schon ca. 200 Mal ihre Menstruation, bevor ihre Gebärmutter ihre eigentliche Funktion übernimmt. Da die Schwangerschaften früher oft schon in sehr jungen Jahren stattfanden und auch die Lebenserwartung nicht so hoch war, war auch das Risiko für eine Endometrioseerkrankung nicht so hoch. Da sich dies aber geändert hat, könnte dies eine Ursache für die zunehmende Zahl der Endometriose-Fälle sein, da mit jeder Menstruation das Risiko für eine Verschleppung von Endometrium in den Bauchraum steigt.<br>
+            <br><br>
+            Quellen: <br>
+            (1) Vgl. Mechsner, Prof. Dr. Sylvia: Endometriose. Die unterschätzte Krankheit, ZS Verlag, München 2021
+            (2) Hudelist, Gernot: Outcome of sonography-based minimally invasive surgery for deep infiltrating endometriosis of the ureter and urinary bladder - a retrospective cohort study, Acta Obstet Gynecol Scand 2018
+            (3) https://flexikon.doccheck.com/de/Endometrium
+            (4) https://flexikon.doccheck.com/de/Myometrium
+            (5) https://flexikon.doccheck.com/de/Perimetrium
+            (6) https://www.gesundheitsinformation.de/endometriose.html
+            (7)  https://endometriose.app/adenomyose-ursachen-diagnostik-und-therapie-sowie-abgrenzung-zur-endometriose/
+            (8) https://www.netdoktor.de/womens-health/menstruation-alles-ueber-die-re-440.html
+            (9) https://www.quarks.de/gesundheit/medizin/darum-kommt-die-pubertaet-immer-frueher/
+            (10) https://www.ecosia.org/images?q=lebenserwartung%20frauen%201900&addon=opensearch#id=71F4A37F41EEEBE2AFAE621DED394A5ADA1462B9
+            (11) https://www.bib.bund.de/DE/Fakten/Fakt/F08-Zusammengefasste-Geburtenziffer-ab-1871.html
+             </div>
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer" id="footer-e">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-e">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/kawiba23/index.html">Home</a></li>
+           <li><a href="/kawiba23/impressum.html">Impressum</a></li>
+           <li><a href="/kawiba23/datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>

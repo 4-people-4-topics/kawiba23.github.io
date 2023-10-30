@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+        </script>
+        
+        <div class="content-box">
+        <div class="content-e">
+          <div class="title">Therapiemöglichkeiten</div>
+        </div> 
+
+        <div class="content-box">
+          <div class="leText"> Die Behandlung von Endometriose zielt darauf ab, Schmerzen zu lindern, Symptome zu minimieren und einen möglichen Kinderwunsch zu erfüllen. Endometriose kann nicht geheilt werden, es ist bisher nur möglich durch eine Therapie die Endometriose-Herde zu reduzieren und die Lebensqualität der betroffenen Frauen zu verbessern. Grundsätzlich stehen zur Behandlung der Endometriose zwei Möglichkeiten zur Verfügung: Operation und Homontherapie. Beide Optionen können Einfluss auf die Schmerzen und den Kinderwunsch nehmen und müssen individuell mit der jeweiligen Patientin abgewogen und besprochen werden, denn je nach Alter, dem Schweregrad der Erkrankung und einem möglichen Kinderwunsch müssen die Thearpieoptionen angepasst werden.(1)
+            <br><br>
+            Operationsmöglichkeiten
+            <br><br>
+            Durch eine Operation, zum Beispiel eine Laparoskopie wird Endometriosegewebedort entfernt oder zerstört, wo es nicht hin gehört und ist somit vernichtet. Anders als beispielsweise bei Myomen, die bei einer Operation entfernt werden und anschließend nicht nachwachsen, ist Endometriose eine hormonabhängige, chronische Erkrankung und neue Läsionen werden nachwachsen.(1) Ein solcher Eingriff kann jedoch die Chance auf eine Schwangerschaft erhöhen und auch Schmerzen lindern, jedoch bilden sich bei etwa 20 von 100 Frauen nach 5 Jahren neue Endometriose-Herde. Es besteht ebenfalls die Möglichkeit einer Gebärmutterentfernung (Hysterektomie), jedoch kommt eine solche Totaloperation bei jungen Frauen nicht in Frage und ist nur sinnvoll, wenn kein Kinderwunsch besteht, Endometriose-Herde in der Gebärmutterwand liegen und andere Therapie-Formen nicht ausreichend helfen oder nicht möglich sind. Endometriose erfordert ein Langzeittherapiekonzept, denn nach einer Operation ist die Krankheit nicht geheilt, sondern erfordert eine weitere Behandlung in Form einer Hormontherapie.(2)
+            <br><br>
+            Hormontherapie
+            <br><br>
+            Besonders wichtig bei der Behandlung von Endometriose sind hormonelle Therapiemöglichkeiten. Prinzipiell nutzt man hierfür Gestagene, die die Eierstöcke außer Betrieb setzen. Gestagen steht entweder in Form von Progesteronmonopräparaten (Progesteron only pills (POP)) oder in Form von kompinierten Pillen (kombinierte orale Konrtazeptiva (KOK)) zur Verfügung. Dem Körper wird eine Schwangerschaft vorgegaukelt, was dazu führt, dass keine Gebärmutterschleimhaut aufgebaut wird und somit auch keine Endometriose-Herde wachsen können. Welches Gestagen verwendet wird und welche Art der Pille die betroffene frau nehmen sollte, ist von Patientin zu Patientin unterschiedlich und muss individuell entschieden werden. Teilweise ist es auch sinnvoll, das Präperat zu wechseln oder die Dosierung der Hormone anzupassen. Wichtig ist aber, dass die Patientinnen Geduld haben, auch wenn es zu Zwischenblutungen kommt. Es kann bis zu sechs Monaten dauern, bis die Patientin blutungsfrei ist und erst danach können Aussagen über die Wirksamkeit getroffen werden.(1) Eine Pillenpause muss nicht sein, aus medizinischer Sicht ist sie nicht notwendig und es kann sein, dass auch eine Abbruchblutung als sehr schmerzhaft empfunden wird und sich somit die Lebensqualität der Frau nicht bessert. Aus diesem Grund ist es sinnvoller die Pille nonstop einzunehmen.(1) Auch eine Spirale, die als lokale hormonelle Therapie fungiert, kann man einsetzen. Es kommt jedoch vor, dass eine komplette Funktionslosigkeit der Ovarien nicht erreicht werden kann und Endometriose-Schmerzen somit nicht komplett unterdrückt werden können. In diesem Fall gibt es die Möglichkeit, die Patientin künstlich in die Wechseljahre zu versetzen. Hierzu verwendet man GnRH-Analoga (synthetische Nachbildungen des körpereigenen Gonadotropien-Releasing-Hormons, die der Hypophyse anzeigen, dass ausreiched Östrogen im Körper vorhanden ist und nicht weiter gebildet werden muss.). Es werden dann keine Östrogene mehr produziert und die Eierstöcke sind außer Betrieb gesetzt, es kommt also auch nicht mehr zu Aktivitäten der Endometriose-Herde. Das Medikament muss einmal im Monat gespritzt werden, aber die Therapie ist voll reversibel, sobald das Medikament nicht mehr gegeben wird. Auch hier muss wieder abgewartet werden, ob es eine Besserung gibt und die Therapie muss entsprechend angepasst werden. GnRH-Analoga werden nur als Zweitlinientherapie eingesetzt, wenn Hormontherapien mit POP und KOK erfolglos bleiben, da sie kostenintensiver sind und mehr Nebenwirkungen haben.(1)
+            <br><br>
+            Behandlung mit Schmerzmitteln
+            <br><br>
+            Ganz wichtig für das Leben mit Endometriose ist die Nutzung von Schmerzmitteln. Durch Schmerzmittel wird der von Endometriose verursachte Schmerz behandelt. Oft werden hierfür nichtsteroidale entzündungshemmende Medikamente (NSAIDs) wie Ibuprofen verwendet.(3) Schmerzmittel haben keinen Einfluss auf den Verlauf der Krankheit, sie behandeln nur die Symptome. Trotzdem ist es sinnvoll Schmerzmittel zu nutzen, denn durch ein gutes Schmerzmanagement können die Patientinnen ihre Lebensqualität verbessern. Außerdem führen jahrelang wiederkehrende und unzureichend behandelte Schmerzen zu einer Verschlimmerung der gesamten Situation, da sie chronisch werden können und sich so zunehmend steigern.(1) Aufgrund der jahrelangen erstreckenden Schmerzen, können physische und psychische Mechanismen bei Endometriosepatientinnen eine zunehmende Empfindlichkeit gegenüber Schmerzen hervorrufen. Chronische Schmerzen führen dann zu weiteren Verspannung und weiteren Schmerzen. Ebenso wie dauerhafte Nervenaktivierungen zu Störungen in der Wahrnehmung der Schmerzen führen. 
+            <br><br>
+            Multimodale Schmerztherapie
+            <br><br>
+            Viele Betroffene entwickeln auch psychosomatische Symptome, da sie in ihrem Leben stark eingeschränkt sind. Dies wäre ein Ansatzpunkt für eine multimodale Schmerztherapie, wenn Medikamente und Operationen nicht ausreichen. 
+            Bei einer multimodalen Schmerztherapie wird individuell auf die Lebensbedingungen und Schmerzustände der Betroffenen eingegangen. Es wird ein ganzheitliches Konzept angewendet. Zumeist arbeiten hier mehrere Fach- und Therapiebereiche zusammen, wie Psychotherapie, spezielle Physiotherapie, Entspannungsverfahren, Ergotherapie, medizinische Trainingstherapie, sensomotorisches Training und weitere Verfahren, die dafür sorgen sollen, dass sich die Schmerzzustände bessern und die Patientin wieder ihren Alltag bewältigen kann.(3) 
+            <br><br>
+            Quellen: <br>
+            (1) Mechsner, Sylvia Prof. Dr.: Endometriose-Die unterschätzte Krankheit, ZS Verlag, München 2021
+            (2) https://www.iqwig.de/download/entscheidungshilfe_behandlungen_endometriose_p18-01.pdf 
+            (3) https://www.endometriose-vereinigung.de/therapie.html
+             </div>
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer" id="footer-e">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-e">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/kawiba23/index.html">Home</a></li>
+           <li><a href="/kawiba23/impressum.html">Impressum</a></li>
+           <li><a href="/kawiba23/datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>

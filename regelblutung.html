@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+        </script>
+        
+        <div class="content-box">
+        <div class="content-m">
+          <div class="title"> Die Regelblutung</div>
+        </div> 
+
+        <div class="leText">
+          <div class="content"> Die Regelblutung ist ein natürlicher Prozess, der im Körper biologischer Frauen stattfindet. Sie tritt in der Regel monatlich auf und bezeichnet den Abfluss von Blut und Gewebeteilen aus der Gebärmutter. Diese Blutung dient dazu, die Gebärmutterschleimhaut abzustoßen, wenn keine Schwangerschaft eingetreten ist.
+            <br><br>
+            Der Ablauf der normalen Periode<br><br>
+            
+            Einmal im Monat hat eine Frau die Menstruation. Diese dauert in der Regel drei bis sieben Tage an und wird von drei Hauptstellen, dem Hypothalamus, der Hypophyse und den Geschlechtsorganen, gesteuert.  Der Hypothalamus ist das Hauptzentrum für die Steuerung unseres vegetativen Nervensystems. Er ist entscheidend für die Regelmäßigkeit der Menstruation und beginnt mit dem geschlechtsreifen Alter Einfluss auf diese zu nehmen. Informationen zur Regelmäßigkeit der Menstruation werden zu einer Information umgewandelt und an die Hypophyse weitergeleitet. Ihre Hauptaufgabe ist die Regulation des Hormonsystems. Sie erhält die Informationen, welche Hormone wann und wo gerade gebraucht und produziert werden müssen. Im Anschluss werden die Eierstöcke angeleitet die Hormone Östrogen, Testosteron und Progesteron zu produzieren. Diese drei Hormone werden zu verschiedenen Zeiten und in unterschiedlichen Mengen ausgeschüttet und lösen zusammen, etwa alle vier Wochen, eine Menstruation aus. Solange eine Frau einmal im Monat eine Periode hat, wird das als regelmäßig gezählt. Der Abstand zwischen den Blutungen muss nicht immer 28 Tage dauern, sondern variiert zwischen 24 und 37 Tagen.(1,2)<br>
+            Mädchen bekommen zwischen dem neunten und sechszehnten Lebensjahr das erste Mal ihre Tage.  Bei den meisten ist sind sie in den ersten Jahren noch nicht regelmäßig und es kann bis zu vier Jahren dauern, bis eine Regelmäßigkeit erreicht wird. Durchschnittlich verliert eine Frau während einer Periode 70 Milliliter Blut. Die Farbe des Blutes kann unterschiedlich sein. Grundsätzlich wird in vier Farben unterteilt: Hellrot, Mittelrot, Dunkelrot und braun bis dunkelbraun. Hellrotes Blut kann auf einen niedrigen Östrogenspiegel hinweisen, der zum Beispiel nach oder während einer Diät auftritt. Mittelrotes Blut ist normal und es besteht kein Grund zur Sorge. Am Anfang der Tage ist das Blut häufig dunkelrot, da die Blutung am stärksten ist. Hier finden sich zudem kleine Blutklümpchen. Diese sind ebenfalls normal, da es sich um kleine Teile der Gebärmutterschleimhaut handelt. Werden bei den Klümpchen Abweichung von der regulären Größe festgestellt, sollte eine Frauenärztin oder einen Frauenarzt aufgesucht werden. Bei Auffälligkeiten und Beschwerden sind medizinische Untersuchungen ratsam, um Erkrankungen, wie Endometriose oder Myome, auszuschließen oder frühzeitig zu diagnostizieren. Dunkleres Blut kommt meist am Ende der Menstruation vor. Es fließt langsamer und hat somit mehr Zeit, um mit Sauerstoff zu reagieren und sich zu verfärben.(3)<br>
+            Um das Blut währen der Menstruation aufzufangen, gibt es verschiedene Menstruationsprodukte. Eines dieser Menstruations- oder Hygieneprodukten ist die Binde, welche in die Unterhose eingelegt werden können. Je nach Blutungsstärke gibt es verschiedene Stärken. Ein weiteres Hygieneprodukt ist der Tampon. In jeder Verpackung befindet sich eine Gebrauchsanweisung, die Frauen gründlich durchlesen sollten. Bei Tampons ist wichtig zu beachten, dass sie maximal acht Stunden in der Vagina bleiben dürfen, andernfalls kann es zum toxischen Schocksyndrom-TSS-kommen. Wird der Tampon zu lange im Körper gelassen, können sich Bakterien ansiedeln und Gifte produzieren. Diese Gifte regen die Abwehrzellen im Körper an, es können Entzündungen auftreten. Bei jeder zehnten Infektion kann das TSS sogar tödlich verlaufen. Die Mehrheit der Frauen greifen zu diesen klassischen Einwegprodukten. In den vergangenen Jahren wuchs der Markt für Menstruationsprodukte stetig. Die Hersteller haben den Fokus auf umweltschonende Produkte gelegt. Hygieneprodukte wie Schwämme, Menstruationstassen, Periodenunterwäsche und Baumwollbinden sind sehr nachhaltig, da sie nach dem Ausspülen oder Waschen wiederverwendbar sind.(4,5)<br>
+            <br><br>
+            Hypermenorrhoe<br><br>
+            
+            Normalerweise verlieren menstruierende Frauen während ihrer Periode ungefähr 60 bis 70 Milliliter Blut. Bei einer zu starken Blutung, der Hypermenorrhoe, werden über 80 Milliliter ausgeschieden. Dies führt dazu, dass Frauen die an dieser Erkrankung leiden, diese oftmals als belastend empfinden, da sie stündlich ihre Hygieneartikel, wie Binden oder Tampons wechseln müssen. Zudem kann die Erkrankung zu körperlichen Folgen, wie Eisenmangel, führen.(2)<br>
+            Bei dieser Erkrankung gibt es verschiedene Ursachen, wie Gerinnungsstörungen, das Von-Willenbrand-Syndrom oder das Einsetzen einer Kupferspirale als Verhütungsmethode. Allerdings kann auch eine große Gebärmutter für eine starke Regelblutung sorgen. Zudem kann eine Hypermenorrhoe ein Anzeichen für Endometriose sein. Eine weitere Ursache können Myome sein. Myome sind gutartige Wucherungen innerhalb der Muskelschicht des Uterus. Sie kommen häufig bei Frauen zwischen 30 und 40 Jahren vor. Jede zweite Frau bekommt einmal in ihrem Leben Myome. Das Auftreten der gutartigen Tumore kann sehr verschieden ausfallen. Die Größe kann variieren und sie können alleine, sowie in Gruppen auftreten. Auch die Symptome können pro Frau variieren. Eines der Leitsymptome der jedoch Myome die starke Blutung.(2)<br>
+            Zur Behandlung von Hypermenorrhoe können Frauen Progesteron Tabletten einnehmen. Damit wird der Aufbau der Gebärmutterschleimhaut in der Zeit vor der Periode erschwert, wodurch die Regelblutung schwächer ausfällt. Auch Schmerzmittel, wie Ibuprofen, Paracetamol oder Diclofenac, lindern einerseits Schmerzen, andererseits können sie gleichzeitig den Blutverlust verringern.(6)
+            <br><br>
+            Unterleibschmerzen
+            <br><br>
+            Prostaglandine sind Moleküle, die die Kontraktion der Gebärmuttermuskulatur induzieren und den Blutfluss nach außen ermöglichen. Bei manchen Frauen kann es allerdings zu einer übermäßigen Produktion von Prostaglandinen kommen. Dies führt dazu, dass die Muskelkontraktion unkoordiniert und zu intensiv auftreten, was mit starken Schmerzen verbunden ist.<br>
+            Der Fachbegriff für Regelschmerzen ist Dysmenorrhoe. Diese unterteilt man die primäre Dysmenorrhoe und die sekundäre Dysmenorrhoe. Als primäre Regelschmerzen werden Beschwerden, wie Krämpfe und Schmerzen im Unterleib im Zeitraum der Pubertät bezeichnet, die während der Menstruation auftreten, ohne erkennbare Ursache. Man geht aber davon aus, dass Mädchen von Anfang an ihrer ersten Periode Unterleibschmerzen haben, wenn ihre Mütter ebenfalls unter Schmerzen leiden. Es gibt bislang keine fachlich fundierten Erkenntnisse, ob diese wirklich vererbbar sind oder nur ein angewöhntes Verhalten widerspiegeln. Bei vielen Frauen verringern sich diese Schmerzen nach der Geburt oder verschwinden gänzlich. Die sekundäre Dysmenorrhoe tritt später im Leben auf, meistens bei Frauen die zirca 30 Jahre alt sind. Auslöser für diese Regelschmerzen sind vielseitig. Es können sich neue Myome gebildet haben, aber auch Polypen. Außerdem kann es ein erneutes Anzeichen für Endometriose sein. Frauen, die an Endometriose erkrankt sind, haben oftmals stärkere Schmerzen als Frauen mit Myomen oder Polypen.(2,7)<br>
+            Eine Behandlungsmöglichkeit für Dysmenorrhoe ist beispielsweise die Pille. Die Pille wird teilweise deshalb verschrieben, um starke Schmerzen zu lindern, die diese oftmals bis zu 90 Prozent der Regelschmerzen regulieren kann. Eine andere Möglichkeit sind Schmerztabletten, wie Ibuprofen oder Naproxen. Diese verhindern die Neubildung der schmerzbringenden Prostaglandine, da sie bereits Schmerzen verursachen können, sobald sie sich in der Blutbahn befinden.  Aus diesem Grund sollten schon zu Beginn der Periode oder wenn eine Frau leichte Anzeichen von aufkommenden Regelschmerzen verspürt, Schmerzmittel eingenommen werden. Zudem können Schmerzen und Krämpfe durch heiße Bäder, Wärmflaschen oder Kirschkernkissen gelindert werden, da dadurch die Muskulatur entspannt wird.(2)
+            <br><br>
+            Quellen: <br>
+            (1) Frei, Franka: Periode ist politisch. Ein Manifest gegen das Menstruationstabu, München, Heyne, 2020
+            (2) De Liz, Sheila Dr. med.: Unverschämt. Alles über den fabelhaften weiblichen Körper, Hamburg bei Reinbek, Rowohlt Taschenbuch, 2019
+            (3) https://erdbeerwoche.com/meine-regel/was-die-farbe-deines-menstruationsblutes-ueber-deine-gesundheit-verraet/#:~:text=Die%20Farbe%20deines%20Menstruationsblutes%20kann,noch%20kein%20Grund%20zur%20Sorge.
+            (4) Schütz, Esther Elisabeth und Kimmich, Theo: Körper und Sexualität, Freiburg in Breisgau, Herder, 2001
+            (5) Srömer, Luisa und Eva: Ebbe und Blut. Alles über die Gezeiten des weiblichen Zyklus, München, Gräfe und Unzer, 2017
+            (6) https://www.gesundheitsinformation.de/wie-laesst-sich-eine-zu-starke-regelblutung-behandeln.html#:~:text=Bei%20einer%20starken%20Regelblutung%20k%C3%B6nnen,Tabletten%20%C3%A4hnlich%20gut%20wie%20NSAR.
+            (7) https://this.place/blogs/periode/regelschmerzen-was-sind-die-unterschiede-zwischen-primarer-und-sekundarer-dysmenorrhoe
+            
+            
+            
+            
+            
+             </div>
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer" id="footer-m">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-m">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/kawiba23/index.html">Home</a></li>
+           <li><a href="/kawiba23/impressum.html">Impressum</a></li>
+           <li><a href="/kawiba23/datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>

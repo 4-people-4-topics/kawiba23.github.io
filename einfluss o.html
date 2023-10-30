@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+        </script>
+        
+        <div class="content-box">
+        <div class="content-p">
+          <div class="title"> Einfluss der Psyche auf den Orgasmus</div>
+        </div> 
+
+        <div class="content-box">
+          <div class="leText"> Das Gehirn ist das größte Geschlechtsorgan eines jeden Menschen, erklärt Ann-Marlene Henning. Geht es um den Orgasmus einer Frau, geschieht dieser nur über Signale des Gehirns. Doch auch das Gehirn muss dementsprechend erst „Fühlen“ lernen, weshalb 20 bis 30 Prozent aller Frauen, egal welchen Alters, noch nie den Höhepunkt erreicht haben. Auch wenn das Gehirn uns nach „intensivem Training“ ungeahnte Glücksgefühle erleben lässt, kann es auch ein enormer „Stopper“ sein. Durch Ängste und Unsicherheiten, schlechte Gefühle und Gedanken, Traumata, fehlendes Vertrauen und fehlende Erfahrung, bleibt der Orgasmus aus. Bei viel Stress ist der Körper nicht darauf fokussiert den Genuss zu erleben, sondern eher, die psychische und physische Gesundheit aufrechtzuerhalten. Ebenso verhindert die Psyche die „Lust“ am Geschlechtsverkehr. Hinzu kommt, dass bestimmte Medikamente, unter anderem auch viele Antidepressiva, den sexuellen „Trieb“ blockieren.(1)
+            Daraus resultiert, dass ein „freier Kopf“, optimale Lebensumstände und situative Bedingungen Voraussetzungen für die Orgasmus Fähigkeit einer Frau sind. Zudem gilt der Orgasmus der Frau als ein sogenanntes „Mysterium“, was noch vieler Forschungen bedarf.(2)
+            <br><br>
+            Psychische Faktoren als Ursache von Vaginismus
+            <br><br>
+            Die unwillkürliche Verkrampfung der Beckenbodenmuskulatur und der Scheide der Vagina, ist keine körperliche Erkrankung. Vaginismus ist eine der häufigsten sexuellen Funktionsstörungen und beschreibt eine psychosomatische Erkrankung, die durch Angst oder Trauma hervorgerufen wird. Psychosomatische Erkrankungen werden im Prozess der Entstehung sowohl von psychischen als auch physischen Faktoren begleitet. Durch das Verschließen des Introitus vaginae (Scheideneingang), ist das Eindringen schmerzhaft oder sogar unmöglich. Frauen sind demnach nicht nur beim Sex eingeschränkt, sondern haben unter anderem auch Probleme beim Einführen eines Tampons oder auch bei Frauenarztbesuchen. Oft können Untersuchungen deshalb nicht gründlich durchgeführt werden (z.B. Krebsvorsorge), Probleme können unentdeckt bleiben.(3,4)
+            Die Funktionsstörung wurde bereits 1547 in dem Werk „Die Krankheiten der Frauen“, Autor unbekannt, erwähnt. Dennoch gibt es bis heute nur sehr rare Forschungen über Vaginismus. Zumindest wurde Klarheit über die Entstehung des Vaginismus erzielt. Weiterhin führt das fehlende Wissen über den Vaginismus zu Unsicherheiten, weshalb Betroffene oft jahrelang unter Scham und unerklärlichem Schmerz leiden. 
+            Die Zahl der Betroffenen schwankt, ursächlich durch fehlende Diagnose und das lückenhafte Wissen, extrem. In Deutschland geht man von vier bis acht Millionen Frauen aus.(5)
+            Wenn der Körper eine Art Gefahrensituation wahrnimmt, versucht er sich mit einer sogenannten Schutzreaktion abzuschotten. Wenn der Scheideneingang sich schließt, kann das zum Beispiel vor dem Leid der Penetration, der Angst vor einer ungewollten Schwangerschaft, und der Übertragung sexueller Krankheiten schützen. Die Ängste können durch Erfahrungen entstehen, wie zum Beispiel sexuelle Traumata, ebenso wie durch Gelesenes oder Gehörtes. Auch Stress und fehlende Kommunikation können die Entstehung von Vaginismus unterstützen. Durch das nicht äußern seiner Bedürfnisse und Wünsche, übergehen Frauen oft ihre eigenen Grenzen, woraufhin der Körper ein Warnsignal sendet.
+            Mögliche Behandlungen wären hierbei eine Einzel- oder auch Paartherapie, um Vertrauen in sich und seinen Partner oder seine Partnerin zu erlangen. Parallel werden Ängste behandelt und die Kommunikation verstärkt.(6,7)
+            <br><br>
+            Quellen: <br>
+            (1) https://www.spektrum.de/lexikon/psychologie/orgasmus/10990; 02.10.2023
+            (2) Henning, Ann-Marlene (HEISSKALT INFORMIERT):  das Gehirn als größtes Geschlechtsorgan; Welchen Einfluss hat die Psyche auf den Orgasmus, Youtube 2020; 
+            (3) https://www.youtube.com/watch?v=ruCGgvYXCPs; 03.10.2023
+            (4) https://flexikon.doccheck.com/de/Vaginismus; 01.10.2023
+            (5)Sperlich, Lea (Psychologeek): Tabu, Schmerzen und sexuelle Funktionsstörungen- das ist Vaginismus, Youtube 2023; https://www.youtube.com/watch?v=7er2inQcWlY; 01.10.2023
+            (6) https://www.netdoktor.de/krankheiten/vaginismus/; 01.10.2023
+            (7) https://www.medicinenet.com/what_causes_vaginismus/article.htm; 12.10.2023
+             </div>
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer" id="footer-p">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-p">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/kawiba23/index.html">Home</a></li>
+           <li><a href="/kawiba23/impressum.html">Impressum</a></li>
+           <li><a href="/kawiba23/datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>

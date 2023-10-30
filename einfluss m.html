@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+        </script>
+        
+        <div class="content-box">
+        <div class="content-p">
+          <div class="title"> Einfluss der Menstruation auf die Psyche</div>
+        </div> 
+
+        <div class="content-box">
+          <div class="leText">
+            Das Wort Menstruation beschreibt das periodische Ausscheiden von Blut aus der Gebärmutter (Uterus) im Rahmen des weiblichen Zyklus. Neben physischen Auswirkungen hat die Menstruation auch Einfluss auf die Psyche der Frau. Genauso, beeinflusst die Psyche die Menstruation.
+            Die „WHO“ versteht unter menstrualer Gesundheit, nicht nur eine schmerzfreie Periode, sondern das Wohlergehen der Frauen in der Gesamtheit des Zyklus. Allerdings ist dies ein unerreichbares Ideal in der heutigen Gesellschaft.(1)
+            Rund 60 Milliliter verlieren derzeit zwei Milliarden Frauen - weltweit - während ihrer Periode. Dennoch werden einhergehende physische und psychische Faktoren in den größten Teilen der Erde ignoriert, das Stigma um die Menstruation hat einen weit zurückgehenden historischen Hintergrund, „Unsere Sicht auf die Menstruation, wie sie heute ist, ist ein Produkt der Wissens Produktion, also der Geschichtsschreibung über Menstruation;“ erklärt die Autorin und Journalistin Franka Frei. Die Notwendigkeit einer Enttabuisierung rund um das Thema, spricht Fr. Frei auch in ihrem Buch: „Periode ist politisch. Ein Manifest gegen das Menstruationstabu“, an. Denn nicht nur Traumata oder Stress im Alltag führen zu einer Störung des Zyklus und deren Hormone, sondern auch der Umgang der Gesellschaft mit dem Thema Menstruation. Durch die Tabuisierung entstehen Schamgefühle und Unsicherheiten. Durch den Mythos, dass, menstruierende Frauen, unrein wären, da sie überschüssige Körperflüssigkeiten ausstoßen, entsteht ein ungesundes Verhältnis gegenüber der Periode. Dadurch wird der Prozess, der eigentlich dafürsteht, dass der Körper einer Frau gesund und fortpflanzungsfähig ist, gestört. Es können Krankheiten wie PMS oder Endometriose entstehen und ein eigentlich gesunder Körper wird auf Grund von einer Stigmatisierung der Gesellschaft, ungesund.(2
+            <br><br>
+            Der hormonelle Einfluss des Zyklus auf die Psyche
+            <br><br>
+            Der Zyklus einer Frau, wird durch verschiedene Hormone beeinflusst. Diese sorgen an unterschiedlichsten Stellen des Zyklus für bestimmte Prozesse im Körper. Hormone haben jedoch nicht nur die Kontrolle über die physischen Prozesse, welche in Kapitel 3 aufgegriffen werden, sondern wirken sich ebenso auf die Psyche der Frau aus. Stimmungsschwankungen mit extremen Hoch- und Tiefpunkten sind für die meisten Frauen normal. Die Schwankungen lassen sich anhand der Phasen des Zyklus, und der daran beteiligten Hormone herleiten. Während des Menstruationszyklus verändern sich die Mengen der Sexualhormone im Körper einer Frau. Im Eierstock werden die Hormone Androgene, Östrogene und Gestagene synthetisiert. Dabei überwiegt das Mengenverhältnis der sogenannten Sexualhormone Östrogen und Progesteron. Das männliche Hormon Testosteron wird ebenfalls im geringen Maße ausgeschüttet. Die Regulation der Steriodogenese hängt von den Luteinisierendes Hormon (LH) und Follikelstimulierendem Hormon (FSH) ab.(3)
+            Östrogen wird auch das Hormon der „Weiblichkeit“ bezeichnet, da es Fetteinlagerungen an den „richtigen Stellen“ (Brust und Hüfte) produziert, und Wassereinlagerungen im Gewebe die Haut weicher erscheinen lassen. Auf der emotionalen Ebene sorgt Östrogen für das Interesse an einem Sexualpartner und den eventuellen Wunsch nach Fortpflanzung. Genauso lässt es uns durchaus „sexy“ fühlen und wirken, und gibt uns somit in der ersten Zyklushälfte einen Selbstwertaufbau, nachdem dieser aufgrund von physischen und psychischen Auswirkungen der Periode, verringert wurde. Progesteron, auch „Gelbkörperhormon“ genannt, dominiert die zweite Zyklushälfte. Es entzieht das abgelagerte Wasser im Gewebe und sorgt für einen entspannten Schlaf, weshalb es auch „Chill- Hormon“ genannt wird. Das Hormon bewirkt somit eine Ruhephase. Außerdem hemmt es die Bildung des stimulierenden Hormon LH, bis der Gelbkörper irgendwann ganz zerfällt. Die Produktion von Progesteron wird daraufhin gedrosselt, und wenn der Progesteronspiegel unter dem des Östrogens ist, setzt die Regelblutung ein. Passiert dies nicht, kann das unter anderem eine Folge von Stress sein. Ein hohes Stresslevel (physisch oder psychisch), hungern und extremer Sport kann den Takt, den der Hypothalamus bestimmt, stören oder ganz aussetzen lassen. Das kann dazu führen, dass die Periode ausbleibt oder in einem unregelmäßigen Takt eintritt. Testosteron ist das letzte der wichtigsten Hormone, denn es regelt die Libido und den Antrieb der Frauen. Es wird in der Nebennierenrinde und im Eierstock gebildet. Testosteron lässt uns „konzentrieren“ und unseren Verstand anwenden. Testosteron ist bei Männern in deutlich größeren Mengen vorhanden als im weiblichen Körper, dennoch spielt es für das allgemeine Wohlbefinden der Frau eine große Rolle. Ist es jedoch zu viel vorhanden, kann dies zu erhöhter Aggressivität, Reizbarkeit und Minderung des Selbstwertgefühles führen. Ein Testosteron Überschuss kann durch eine Störung im Hormonhaushalt entstehen, wie zum Beispiel durch das polyzystische Ovarialsyndrom (PCOS) oder auch eine genetische Veranlagung. Umstritten ist jedoch noch, ob ein erhöhter Testosteron Spiegel ebenso durch psychische Faktoren entstehen kann, zum Beispiel durch die Stigmatisierung des Zyklus der Frau.(4,5)
+            Schlussfolgernd ist zu sagen, dass Hormone zu einem großen Teil zum Wohlergehen der biologischen Frau beitragen. 
+            <br><br>
+            Psychische Faktoren als Ursache für das PMDS
+            <br><br>
+            „Die prämenstruelle dysphorische Störung (PMDS) ist eine neurobiologische, hormonabhängige Erkrankung, die zu starken Stimmungsschwankungen führt.(6)
+            Die Krankheit PMDS ist eine Sonderform des prämenstruellen Syndroms (PMS). PMS bezieht sich vor allem auf die körperlichen Symptome, wie Gewichtszunahme, Krämpfe und Kreislauf Probleme. Im Vergleich zu PMS sind Frauen mit PMDS deutlich stärker im privaten und beruflichen Leben eingeschränkt. Denn bei dem Krankheitsbild von PMDS treten in der zweiten Hälfte des weiblichen Zyklus regelmäßig Depressionen, Aggressionen (sog. Affektlabilität), und das Bedürfnis nach sozialem Rückzug auf. Besonders ausgeprägt sind depressive Stimmung, die sog. Dysphorie. „Dysphorisch“ bedeutet so viel wie ängstlich-bedrückt, freudlos und gereizt.(7,8)
+            Obwohl PMDS abhängig vom Zyklus ist, handelt es sich nicht um ein Hormon-Ungleichgewicht, sondern um eine starke negative Reaktion des zentralen Nervensystems auf natürliche Hormonschwankungen. Warum PMS oder auch PMDS sich auf die Psyche auswirken, ist bislang nicht vollständig geklärt. Gemäß den wissenschaftlichen Hypothesen geht man von einem Ungleichgewicht im weiblichen Hormonhaushalt als Auslöser für die vielfältigen Symptome aus. Die einzelnen Phasen des Menstruationszyklus werden durchsteigende, und fallende Konzentration bestimmter weiblicher Hormone, wie Östrogen, Progesteron, Prolaktin gesteuert.(6)
+            Eine weitere Ursache könnte ebenso die im Gehirn erhöhte Transportdichte des Transmitters Serotonin sein, welche im Gehirn stattfindet. Dies begünstigt unter anderem einen vorübergehenden Serotoninmangel. Zurückzuführen sind somit die affektiven Symptome von PMDS auf eine neurobiologische Ursache, welche für Betroffene oft belastend ist. Dabei treten folgende Symptome regelmäßig auf: Stimmungsschwankungen, Gereiztheit, Depressionen und Angstzustände.
+            Eine mögliche Behandlung von PMDS wäre die Kombination - aus der Einnahme von Progesteron Hormonen, einer Ernährungsumstellung und Sport. Teilweise benötigen Betroffene auch Medikamente - wie Antidepressiva - und bedarfsweise, eine psychologische Therapie. Die erste Anlaufstelle, um die passende und effizienteste Behandlung zu erhalten, sollten generell Ärzte und Ärztinnen sein.(9)
+            <br><br>
+            Psychische Faktoren bei der Erkrankung Endometriose 
+            <br><br>
+            Endometriose ist eine oft sehr schmerzvolle, chronische Erkrankung von Frauen. Es ist keine psychosomatische Erkrankung und wird somit auch nicht durch psychische Probleme ausgelöst. Trotz dessen, beeinträchtigt Endometriose die Lebensqualität von bisher erfassten 170 Millionen Frauen im reproduktiven Alter - weltweit.(5,6)
+            Körperliche Symptome bei Endometriose, die schon im Kapitel 4.3 aufgegriffen wurden, belasten oft auch die Psyche der Betroffenen. Bei einer Studie von 913 betroffenen Frauen, gaben 50 Prozent dieser an, Komplikationen in ihrer Partnerschaft zu haben. Aufgrund von Bauchschmerzen und Schmerzen beim Geschlechtsverkehr, auch Dyspareunie genannt, besteht ein reduziertes Interesse an Sexualität. Zudem erschweren Blutungen beim Geschlechtsverkehr oder eine ungewollte Kinderlosigkeit - aufgrund der Endometriose, die Paarbeziehungen. Weitere Symptome wie starke Stimmungsschwankungen oder Müdigkeit, können Patientinnen im Alltag stark einschränken. 
+            Neben starken Schmerzen, leiden 50-70 Prozent der Frauen unter einer starken und einschränkenden Müdigkeit, Fatigue.(1,2,6)
+            Dies führt zu Energiemangel, was den Alltag vor allem im Arbeitsleben, aber auch im privaten Bereich sehr beeinflusst. Trotz der hohen Zahl an Betroffenen wird den Frauen von Ärzten und Ärztinnen, Kollegen und Kolleginnen oder auch seitens Angehörigen häufig sehr wenig Verständnis entgegengebracht. Die eingeschränkte Energie der Betroffenen, fehlendes Verständnis und mangelnde Rücksichtnahme im privaten, wie gesellschaftlichen Umfeld, führen dazu, dass Betroffene weniger am sozialen Leben teilhaben.
+            Viele der betroffenen Patientinnen nehmen diese Situation als Stigmatisierung wahr. Sie fühlen sich einer Gruppe von Menschen zugeteilt, welcher nicht die nötige Akzeptanz entgegengebracht wird.(3)
+            Viele trauen sich deshalb nicht, mit anderen Personen über ihre Erkrankung, oder bei einer fehlenden Diagnose, körperlichen und psychischen Beschwerden, zu reden. Dadurch fehlt es einigen Betroffenen auch an Selbstbewusstsein. Hinzu kommt, dass viele – ursächlich durch ein verzerrtes Körperbild - Schwierigkeiten haben, ihren Körper zu akzeptieren. Die Unsicherheiten gegenüber dem eigenen Körper können unter anderem zu einer pessimistischen Sicht, das zukünftige Leben betreffend - vor allem, was das Arbeitsleben anbelangt, führen. An einer diesbezüglichen Umfrage vom Oktober 2018 über das soziale Netzwerk „MyEndometrioseTeam.com“ nahmen Patientinnen mit einer entsprechenden Diagnose und älter als 19 Jahre teil. Sie machten Angaben über den Einfluss der Endometriose auf Arbeit, Bildung, Beziehung, Lebensentscheidungen und Ziele. Bei der Auswertung zeigte sich, dass 75-80 Prozent der Patientinnen einen pessimistischen Blick auf ihre Zukunft haben. Es nahmen 743 Frauen an der Umfrage teil. Dabei hatten 56 Prozent der Teilnehmerinnen auf einer Schmerzskala von 0-10 täglich ein Schmerz-Level von 8 bis 9. Viele Patientinnen hatten negative Erfahrungen aufgrund von Endometriose und den Eindruck, dass diese Krankheit einen negativen Einfluss auf ihre Bildung, professionellen Ziele, Sozialleben und psychische Gesundheit hat.(4)
+            Diese Wahrnehmung wird dadurch unterstützt, dass 66 Prozent der Teilnehmerinnen schon in die Notaufnahme mussten, 55 Prozent mehrere Operationen hinter sich haben, und 72 Prozent verschriebene Medikamente einnehmen, um Schmerzen und Entzündungen zu behandeln.  Zwischen 75 und 80 Prozent gaben an, schon viel Zeit im Leben durch Endometriose verloren zu haben, und somit eher negativ auf ihre Zukunft eingestellt sind.(10,11)
+            Eine andere Studie mit 810 Betroffenen zeigte, dass im Schnitt wöchentlich 1,1 Stunden im Berufsleben, aufgrund von Fehlzeiten verloren gehen. Außerdem leiden viele unter fehlender Leistungsfähigkeit oder Produktivität, weshalb auch da das Ergebnis zeigte, dass ca. 5,5 Stunden aufgrund von verringerter Leistungsfähigkeit im Beruf - wöchentlich - verloren gehen. Dies führt auch zu finanziellen Problemen der Patientinnen, was wiederum die Psyche belastet.
+            Doch nicht jede Frau, die an Endometriose erkrankt ist, bekommt die nötige Unterstützung. Um eine Diagnose zu erhalten, müssen einige sogar bis zu 9 Jahre warten. Die langen Wartezeiten begünstigen nachvollziehbarerweise die Unsicherheiten der Betroffenen und reduzieren somit deren Lebensqualitäten. Durch die auftretenden Schmerzen, und aber fehlende Diagnose oder auch Fehldiagnosen, verleitet die Hilflosigkeit und Unsicherheit oft noch dazu, psychisch instabiler zu sein. Schon die Symptome, die den Alltag erschweren, sorgen für ein erhöhtes Risiko von Depressionen und Angsterkrankungen. Allerdings beweist eine Studie, dass es ein Unterschied der psychischen Belastung von chronisch erkrankten und nicht chronisch erkrankten-Endometriose Patientinnen gibt. Bei Betroffenen mit chronischen Schmerzen, leiden rund 86 Prozent an Depressionen, wogegen es 38 Prozent bei denjenigen ohne chronische Schmerzen sind. Bei einer weiteren Studie, wurden 104 Betroffene befragt, ob die Angstzustände und Depressionen mit der Schmerzstärke korrelieren. Es gaben 86,5 Prozent an, dass die depressiven Symptome mit der Stärke der Schmerzen variieren. 87,5 Prozent sagten aus, dass auch die Ängste - korrespondierend mit der Schmerztoleranz - unterschiedlich ausgeprägt seien.(12,13,14)
+            Im Allgemeinen kann man sagen, dass Endometriose einen weitreichend negativen Einfluss auf das Leben betroffener Frauen hat. Nicht nur Schmerzen beeinträchtigen Betroffene auf sozialer, privater und beruflicher Ebene, sondern auch die damit einhergehenden psychischen Symptome.(15)
+            <br><br>
+            Quellen: <br>
+            (1) https://www.chicaconciclo.com/blog/zyklus-psychische-gesundheit; 12.10.2023
+            (2)https://www.nationalgeographic.de/geschichte-und-kultur/2023/03/blut-und-scham-wie-die-menstruation-zum-tabuthema-wurde-religion-patriarchat-wissenschaft-medizin
+            (3) https://www.invitra.de/sexualhormone/; 13.10.2023
+            (4) De Liz, Sheila Dr. med.: Unverschämt, Alles über den fabelhaften weiblichen Körper, Hamburg bei Reinbek, Rowohlt Taschenbuch, 2019, S. 231ff
+            (5)https://mentalhelp.at/zu-viel-testosteron-bei-frauen-auswirkungen-auf-die-psyche;
+            (6) https://pmds-hilfe.de/
+            (7) https://www.apotheken-umschau.de/gesund-bleiben/psyche/pmds-psychische-belastung-vor-der-periode-850047.html; 15.04.2023
+            (8) Flemmer, Andrea Dr.:  das Prämenstruelle Syndrom natürlich behandeln, Heilmethoden, die für die Linderung sorgen, Das können Sie selbst tun, Hannover, Schlütersche, 2012, S.10 ff
+            (9) https://pmds-hilfe.de/pmds-behandlung/; 14.10.2023
+            (10) https://www.deutschesgesundheitsportal.de/2023/03/03/wie-endometriose-die-lebensziele-und-entsch; 15.04.2023
+            (11) https://www.carenity.de/informationen-krankheit/magazin/ratschlage/die-am-haufigsten-verwendeten-medikamente-bei-endometriose-indikationen-und-ratschlage-798?;m[mid]=268&0[mid]=26818.172.170.878%2F4%2F2023%2B6%3A04%3A28%2BAM; 12.10.2023
+            (12) https://endometriose.app/psychische-belastungen-bei-endometriose/; 15.04.2023
+            (13) https://www.frauenaerzte-im-netz.de/erkrankungen/endometriose/diagnostik/15.0420.23
+            (14) https://pubmed.ncbi.nlm.nih.gov/31755667/; 15.04.2023
+            (15) https://pubmed.ncbi.nlm.nih.gov/19010584/; 15.04.2023
+            (16)https://www.deutschesgesundheitsportal.de/2023/03/03/wie-endometriose-die-lebensziele-und-entsch; 15.04.2023
+             </div>
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer" id="footer-p">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-p">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/kawiba23/index.html">Home</a></li>
+           <li><a href="/kawiba23/impressum.html">Impressum</a></li>
+           <li><a href="/kawiba23/datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>

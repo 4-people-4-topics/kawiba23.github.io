@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+      <script src="angular/angular.min.js"></script>
+      <!--<script src="angular/angular.js"></script> -->
+      <script src="angular/angular-route.js"></script>
+      <script src="angular/angular-resource.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="./jquery.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="./js.js" ></script>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+      <meta name="author" content="Chris Mills" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta
+       name="description"
+       content="Website für Seminarfacharbeit" />
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" type="image/x-icon" href="icon.ico">
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+       <script src="bootstrap/js/bootstrap.bundle.js"></script>
+       <link rel="stylesheet" href="icomoon/style.css">
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body ng-app="myApp">
+      <div class="container" ng-controller="MyCtrl">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="data.json" ng-load >
+
+        </script>
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'navbar.html'"></div>
+
+        <script>
+          var app = angular.module('myApp', []);
+          app.controller('MyCtrl', function($scope, $http) 
+          {
+            $http.get("header.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+
+            $http.get("navbar.html").then(function (response) {
+             $scope.names = response.data.records;
+            });
+          }); 
+        </script>
+        
+        <div class="content-box">
+        <div class="content-e">
+          <div class="title"> Symptome</div>
+        </div> 
+
+        <div class="content-box">
+          <div class="leText"> Endometriose kann zu einer Vielzahl von Beschwerden führen, die von Frau zu Frau verschieden sein und in der Ausprägung variieren können. Die Beschwerden treten zunächst immer zyklisch, also nach einem bestimmten Muster auf. Dieses ist von Patientin zu Patientin verschieden und kann sich im Laufe der Erkrankung verändern, sodass es auch zu azyklischen Beschwerden kommen kann. Dies erschwert die Diagnosestellung.(1)
+            Hinzu kommt, dass es nicht zwingend einen Zusammenhang zwischen dem Ausmaß der Endometriose und der Schmerzintensität geben muss. Es gibt Frauen, die kaum Beschwerden und trotzdem eine ausgedehnte Endometriose haben, die beispielsweise nur als Zufallsbefund entdeckt wird. Umgekehrt kann es auch bei „unauffälligen“ Befunden schwere Schmerzzustände geben.(2)
+            <br><br>
+            Leitsymptome
+            <br><br>
+            Das Leitsymptom bei Endometriose sind sehr starke, für die Betroffenen schwer auszuhaltende Menstruationsschmerzen (Dysmenorroe), gegen die Schmerzmedikamente oft nicht ausreichend wirken. Ebenfalls häufig sind chronische azyklisch auftretende Unterbauchschmerzen. Diese Schmerzen können vor der Blutung oder in der Mitte des Zyklus (zum Beispiel zum Eisprung) auftreten. (2)
+            <br><br>
+            Weitere Symptome
+            <br><br>
+            Des Weiteren können zyklische Schmerzen beim Wasserlassen (Dysurie) und beim Stuhlgang (Dyschezie) auftreten. Es kommt auch zu Schmerzen beim Geschlechtsverkehr (Dyspareunie), die meist nicht nur zyklisch sondern permanent auftreten und somit das Sexualleben der Betroffenen beeinträchtigen.(2) Es ist auch möglich, dass die Schmerzen ausstrahlen oder nur an Stellen auftreten, an denen sich Endometriose-Herde befinden. Endometriose lässt sich auch deshalb so schwer diagnostizieren, da es einige Symptome gibt, die nicht die Bauchorgane betreffen und deshalb den diagnostischen Ansatz nicht auf Endometriose lenken. Zyklische Rückenschmerzen sind hierfür ein Beispiel. Sie können auftreten, da das Sacrouterinligament, die Verbindung zwischen Uterus und Iliosakralgelenk betroffen sein kann oder die Schmerzen zum Rücken ausstrahlen, da die Gebärmutter auch nach hinten geneigt (retroflektiert) sein kann. Die Schmerzen können auch in die Beine ausstrahlen. 30-50% der Frauen mit Endometriose leiden zudem unter unerfülltem Kinderwunsch.(3,4)
+            
+            <br><br>
+            
+            Vegetative Begleitsymptome
+            <br><br>
+            Weiterhin es kommt auch zu schmerzhaften Blutungen trotz Pilleneinnahme.  Die Pille kann in der Dauereinnahme die Blutung verhindern und damit auch die Schmerzen, wenn jedoch unter der Pillenpause eine Blutung eintritt ist diese schmerzhaft. Es gibt auch viele unspezifische Beschwerden, die mit Endometriose einher gehen können und die chronisch oder unregelmäßig auftreten können, wie vegetative Begleitsymptome wie Übelkeit und Erbrechen. Zum Teil kommt es sogar zu chronischer Erschöpfung, unspezifischen Darmbeschwerden, Blasenbeschwerden, Kopfschmerzen, sehr starken Blutungen, Schwindel oder Schmerzen um den Eisprung.(1)
+            <br><br>
+            Hyperalgesie
+            <br><br>
+            Der Grund für die als unerträglich empfundenen Schmerzzustände ist eine gesteigerte Schmerzwahrnehmung (Hyperalgesie), die mit Veränderungen im Gehirn einher geht. Die Ursache ist eine Sensitivierung der freien Nervenendigungen, das Schmerzempfinden kann also zunehmen, wenn der Schmerzreiz immer wieder erfolgt. Werden die Schmerzen nicht behandelt, können sie in ihrer Intensität zunehmen. Werden starke Menstruationsschmerzen nicht behandelt, kann es zu einer Hyperalgesie kommen. Die regelmäßig wiederkehrenden Schmerzen werden vom Körper als bedrohlich eingestuft. Als Folge davon werden die Schmerzen nicht geringer sondern verstärkt. Das erklärt auch die Schmerzzustände mancher Patientinnen, ohne dass anatomische schwer pathologische Befunde vorliegen.(1)
+            
+            Typisch für Endometriose ist ein sehr komplexes Beschwerdebild. Die verschiedenen Symptome können isoliert oder in Kombination auftreten und unterscheiden sich bei jeder Frau in der Ausprägung. Da die Beschwerden bei Endometriose so verschieden sind und auch nicht zwingend auf eine Erkrankung mit Endometriose hinweisen, wird diese Krankheit auch als das „Chamäleon“ der gynäkologischen Erkrankungen bezeichnet. Es ist für Ärzte oft schwierig, den Zusammenhang zwischen den Schmerzen und der Gebärmutterschleimhaut herzustellen. Hierbei ist es wichtig, die Wahrnehmungen der Patientinnen ernst zu nehmen und entsprechende Therapievorschläge anzubieten. (1,4)
+            <br><br>
+            Quellen: <br>
+            (1) Mechsner, Sylvia Prof. Dr.:Endometriose-Die unterschätzte Krankheit, ZS Verlag, München 2021
+            (2) https://www.apotheken-umschau.de/krankheiten-symptome/erkrankungen-der-weiblichen-geschlechtsorgane/endometriose-symptome-diagnose-therapie-734231.html
+            (3) https://www.apotheken-umschau.de/krankheiten-symptome/erkrankungen-der-weiblichen-geschlechtsorgane/endometriose-symptome-diagnose-therapie-734231.html
+            (4) https://frauenklinik.charite.de/leistungen/endometriose/
+            </div>
+        </div> 
+        
+
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./jquery.js" ></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <scirpt src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./js.js" ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <footer class="footer" id="footer-e">
+        <link rel="stylesheet" href="style.css">
+        <div class= "footer-e">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+         <h5 class="headin5_amrc col_white_amrc pt2">About us</h3>
+          <!--headin5_amrc-->
+          <p class="mb10">Wenn Sie etwas über unsere Gruppe oder die Idee dieser Arbeit erfahren wollen, schauen Sie gerne auf unsere Homepage vorbei!</p>
+        </div>
+        <div class="container">
+          <ul class="foote_bottom_ul_amrc">
+           <li><a href="/kawiba23/index.html">Home</a></li>
+           <li><a href="/kawiba23/impressum.html">Impressum</a></li>
+           <li><a href="/kawiba23/datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        </div>
+      </footer>
+    </body>
+  
+</html>
