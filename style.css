@@ -107,7 +107,6 @@
 .content-box .title {
   padding: 50px;
   margin-top: 200px;
-  margin-bottom: 30px;
   height: 60;
   line-height: 30px;
   width: auto; 
@@ -125,7 +124,6 @@
   overflow: hidden;
   padding: 70px;
   font-size: 18px;
-  margin-top: 20px;
   margin-bottom: 50;
   height: auto;
   line-height: 20px;
@@ -134,6 +132,7 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   text-align: left;
+  line-height: 1.6;
   
 }
 
