@@ -3,7 +3,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 50px; 
     margin-bottom: 25px;
     padding-bottom: 30px; 
     margin-left: 0%;
@@ -13,11 +12,25 @@
     height: 100px;
 }
 
-.menu-text {
-  display: inline-block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-} 
+
+.navbar-text {
+  text-align: right;
+  margin-left: 500px;
+  font-style: italic;
+  font-size: large;
+}
+
+.container-fluid {
+  max-height: 100px; 
+  position: relative; 
+}
+
+.logo {
+  width: auto; 
+  height: 90px;
+  margin-left: 0px; 
+  margin-top: 5px;  
+}
 
 .container {
   max-width: 1519px;
@@ -63,9 +76,6 @@
   overflow-x: hidden;
 }
 
-.navbar-text {
-  text-align: right;
-}
 
 .btn {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -156,31 +166,17 @@
 
 
 .image-container {
-  margin-top: 150px;
-  margin-bottom: 200px;
-  height: auto;
-  padding: 100px;
-  width: 1480px;
   position: relative;
-  overflow-y: hidden; 
-  overflow: hidden; 
-
-  
+  max-width: 1519px;
+  margin-top: 180px; 
+  margin-bottom: 100px
   
 } 
 
 .aboutUs {
-  width: auto; 
-  text-align: center;
-  overflow-y:hidden; 
-  margin-right: 50px; 
-  position: relative; 
-  overflow: hidden; 
-  float:middle; 
+  width: 100%;
+  padding: 50px;
 }
-
-
-
 
 
 
@@ -190,7 +186,7 @@
 .footer-m {background: #F25252;}
 .footer-e {background: #F2C1BD;}
 .footer-p {background: #fe9286;}
-.footer-main {background: rgb(243, 197, 105);} 
+.footer-main {background: #eb884c;} 
 
 footer { width:100%; min-height:250px; padding:10px 0px 25px 0px ;}
 .pt2 { padding-top:40px; margin-bottom:20px ;}
@@ -203,6 +199,7 @@ footer p { font-size:13px; color:rgb(0, 0, 0); padding-bottom:0px; margin-bottom
 .fleft { float:left;}
 .padding-right { padding-right:10px; }
 .position { bottom: 1px;}
+.headin5_amrc {font:impact;}
 
 .footer_ul2_amrc {margin: 1px; list-style-type:none; padding:10px ;}
 .footer_ul2_amrc li p { display:table; }
